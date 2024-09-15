@@ -28,7 +28,7 @@ jobs:
 
       - name: Run linter
         run: |
-          flake8 src/ --statistics
+          pylint src/ --disable=R,C
 
       - name: Run unit tests
         run: |
