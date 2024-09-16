@@ -26,6 +26,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run linter
+        run: |
+          flake8 src/  --statistics
+          
       - name: Run unit tests
         run: |
           pytest src/tests/unit
