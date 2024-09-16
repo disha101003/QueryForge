@@ -1,15 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__,
-            template_folder="../../frontend/templates",  # Pointing to templates directory
-            static_folder="../../frontend/assets")       # Pointing to assets directory (for CSS, JS)
+            # Pointing to templates directory
+            template_folder="../../frontend/templates",
+            # Pointing to assets directory (for CSS, JS)
+            static_folder="../../frontend/assets")
 
 # Temporary in-memory user data
 users = {}
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -25,6 +29,7 @@ def signup():
             return redirect(url_for('login'))
     return render_template('signup.html')
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -37,6 +42,7 @@ def login():
         else:
             return "Invalid credentials!"
     return render_template('index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
