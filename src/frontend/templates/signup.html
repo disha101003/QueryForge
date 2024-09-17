@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ <style>
+        /* Style for the QueryForge heading */
+        h1 {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 3em;
+            color: #333;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        /* Optional: Add a subtle border under the heading */
+        h1::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 3px;
+            background-color: #333;
+            margin: 10px auto;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
+
         <form id="signupForm" action="{{ url_for('signup') }}" method="POST" class="sign-up-form">
             <h2 class="title">Sign Up</h2>
             <div id="message"></div>
@@ -24,6 +46,6 @@
             <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
         </form>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

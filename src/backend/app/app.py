@@ -4,7 +4,7 @@ app = Flask(__name__,
             # Pointing to templates directory
             template_folder="../../frontend/templates",
             # Pointing to assets directory (for CSS, JS)
-            static_folder="../../frontend/assets")
+            static_folder="../../frontend/")
 
 # Temporary in-memory user data
 users = {}
