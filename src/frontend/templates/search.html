@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Research Opportunities at Purdue University</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <button>Login</button>
+        <button>Home</button>
+        <button>Professor</button>
+        <button>VIP/EPICS</button>
+        <button>DURI</button>
+        <button>Other Research Opportunities</button>
+    </div>
+    <div class="main-content">
+        <h1>Discover Research Opportunities at Purdue University</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." id="searchBox">
+            <button onclick="search()">Q</button>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</html>

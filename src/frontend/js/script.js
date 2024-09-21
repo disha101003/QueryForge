@@ -2,10 +2,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const signupForm = document.getElementById('signupForm');
     const loginForm = document.getElementById('loginForm');
     const messageDiv = document.getElementById('message');
+    const searchBox = document.getElementById('searchBox'); // Assuming you have a search box in your HTML
 
     function displayMessage(message, isError = false) {
         messageDiv.textContent = message;
         messageDiv.style.color = isError ? 'red' : 'green';
+    }
+
+    // Search function
+    function search() {
+        if (searchBox) {
+            alert('Search for: ' + searchBox.value);
+        }
+    }
+
+    // Add event listener for search action
+    if (searchBox) {
+        searchBox.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault(); // Prevent form submission if part of a form
+                search();
+            }
+        });
     }
 
     if (signupForm) {
