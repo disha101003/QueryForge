@@ -1,0 +1,4 @@
+Name: Mahsa Ghasemi - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 238
+Email: mahsa@purdue.edu
+Research Description: Task-Oriented Knowledge Acquisition and Reasoning; Online Learning and Control; Human-Robot Interaction; Trustworthy Artificial Intelligence; Socially and Ethically Beneficial Autonomy

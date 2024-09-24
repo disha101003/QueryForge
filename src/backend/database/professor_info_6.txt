@@ -1,0 +1,4 @@
+Name: Muhammad Ashraful Alam - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: WANG 3051
+Email: alam@purdue.edu
+Research Description: Physics of electronic, optoelectronic, and bioelectronic devices, transport in inhomogeneous systems, reliability limits of CMOS devices, computational modeling

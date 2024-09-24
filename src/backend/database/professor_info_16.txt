@@ -1,0 +1,4 @@
+Name: Nak-seung Patrick Hyun - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 274
+Email: nhyun@purdue.edu
+Research Description: A cyclic learning between biology, mathematical system theory, and robotics with an emphasis on Control Theoretic Bio-Inspired Robotics. Bio-inspired Robotics; Flapping-Wing Vehicles ; Safety-Critical Nonlinear Control ; Adaptive Control; Impulsive Systems ; Contraction Theory ; Geometric Control; Optimal Motion Planning ; Swarm Robotics

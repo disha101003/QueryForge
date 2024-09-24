@@ -1,0 +1,4 @@
+Name: Younghyun Kim - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: BHEE 322B
+Email: younghyun@purdue.edu
+Research Description: Embedded computing systems, Internet-of-Things, System-on-chip and VLSI, Low-power systems

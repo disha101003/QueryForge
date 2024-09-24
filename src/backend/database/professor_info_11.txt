@@ -1,0 +1,4 @@
+Name: Daniel S. Elliott - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 258
+Email: elliottd@ecn.purdue.edu
+Research Description: Nonlinear optics, multiphoton processes, photoionization, competition between optical processes, coherent control, atomic coherence

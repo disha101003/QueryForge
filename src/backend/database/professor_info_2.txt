@@ -1,0 +1,4 @@
+Name: Byunghoo Jung - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: WANG 2053
+Email: jungb@purdue.edu
+Research Description: Circuits and systems for wireless sensing

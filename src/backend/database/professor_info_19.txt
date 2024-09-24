@@ -1,0 +1,4 @@
+Name: Stanislaw H. Zak - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 233B
+Email: zak@ecn.purdue.edu
+Research Description: Control, optimization, nonlinear systems, neural networks, fuzzy logic control

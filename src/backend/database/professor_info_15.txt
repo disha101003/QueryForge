@@ -1,0 +1,4 @@
+Name: Vijay Gupta - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 252
+Email: gupta869@purdue.edu
+Research Description: Intersection of control theory and machine learning,  Distributed estimation and decision making, Cyber-physical-human systems, Signal processing, Game theory, Power grid, Transportation networks

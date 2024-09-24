@@ -1,0 +1,4 @@
+Name: Weng C. Chew - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: WANG 3053
+Email: wcchew@purdue.edu
+Research Description: Electromagnetics, fast and efficient computational algorithms for solving electromagnetic scattering, imaging, quantum, multi-physics, and multi-scale problems

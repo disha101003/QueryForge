@@ -1,0 +1,4 @@
+Name: Anuran Makur - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: LWSN 2116J
+Email: amakur@purdue.edu
+Research Description: Theory of machine learning, Information theory, Applied probability

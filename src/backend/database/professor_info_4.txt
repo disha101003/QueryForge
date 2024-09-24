@@ -1,0 +1,4 @@
+Name: Cheng-Kok Koh - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 254
+Email: chengkok@ecn.purdue.edu
+Research Description: Computer Aided Design (CAD) for Very Large-Scale Integration (VLSI)

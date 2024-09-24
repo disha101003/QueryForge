@@ -1,0 +1,4 @@
+Name: C. S. George Lee - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 256
+Email: csglee@purdue.edu
+Research Description: Robotics, neural fuzzy systems, skills learning

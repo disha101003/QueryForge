@@ -1,0 +1,4 @@
+Name: Sumeet Gupta - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 218
+Email: guptask@purdue.edu
+Research Description: Device-circuit co-design in emerging nanotechnologies for Boolean and non-Boolean computing, spintronics, low power variation tolerant VLSI design,  device-circuit modeling.

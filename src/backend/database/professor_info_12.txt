@@ -1,0 +1,4 @@
+Name: Okan K. Ersoy - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: MSEE 346
+Email: ersoy@ecn.purdue.edu
+Research Description: Digital signal/image processing and imaging, neural networks, decision trees and support vector machines, optical communications, networking and information processing, diffractive optics with scanning electron microscope, Fourier-related transforms and time-frequency methods, probability and statistics

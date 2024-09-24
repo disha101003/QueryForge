@@ -1,0 +1,4 @@
+Name: Shreyas Sundaram (area chair) - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: BHEE 342
+Email: sundara2@purdue.edu
+Research Description: Network science, robustness and resilience of complex networks and systems, dynamics on networks, fault-tolerant and secure control, distributed and decentralized control, graph theory

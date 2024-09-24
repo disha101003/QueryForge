@@ -1,0 +1,4 @@
+Name: Junjie Qin - Elmore Family School of Electrical and Computer Engineering - Purdue University
+Office: WANG 2051
+Email: jq@purdue.edu
+Research Description: Control, optimization, market design, and data analytics applied to power systems and the energy-transportation nexus
