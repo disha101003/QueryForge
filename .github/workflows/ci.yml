@@ -40,7 +40,7 @@ jobs:
           pyinstaller src/backend/app/app.spec  # Use the spec file for building
 
       - name: Archive build artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3  # Update to v3
         with:
           name: flask-app-executable
           path: dist/app  # Path to your built executable
