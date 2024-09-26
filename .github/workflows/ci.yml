@@ -37,7 +37,7 @@ jobs:
       - name: Build executable with PyInstaller using spec file
         run: |
           pip install pyinstaller
-          pyinstaller src/backend/app/app.spec  # Use the spec file for building
+          pyinstaller app.spec  # Use the spec file for building
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v3  # Update to v3
