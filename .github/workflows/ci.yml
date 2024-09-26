@@ -28,9 +28,19 @@ jobs:
 
       - name: Run linter
         run: |
-          flake8 src/  --statistics
+          flake8 src/ --statistics
           
       - name: Run unit tests
         run: |
           pytest src/tests/unit
 
+      - name: Build executable with PyInstaller using spec file
+        run: |
+          pip install pyinstaller
+          pyinstaller src/backend/app/app.spec  # Use the spec file for building
+
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: flask-app-executable
+          path: dist/app  # Path to your built executable
