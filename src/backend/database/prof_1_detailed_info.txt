@@ -1,0 +1,39 @@
+Mahsa Ghasemi
+I am an Assistant Professor at the Elmore Family School of Electrical and Computer Engineering at Purdue University, where I am also affiliated with the Institute for Control, Optimization and Networks (ICON). I lead the Autonomous Knowledge Acquisition and DEcision MakIng (AKADEMI) Group, making theoretical and foundational advancements toward trustworthy sequential decision-making, with the vision of enabling the design of competent, autonomous systems that co-exist with humans, empower them, and are socially, ethically, and economically beneficial.
+Previously, I completed my Ph.D. in Electrical and Computer Engineering at The University of Texas at Austin, USA, in 2021, under the supervision of Prof. Ufuk Topcu. Prior to Ph.D., I received my M.S.E. degree in Mechanical Engineering from The University of Texas at Austin, USA, in 2017, and my B.Sc. degree in Mechanical Engineering from Sharif University of Technology, Iran, in 2014.
+In the AKADEMI group, we develop new models, algorithms, and theories that make autonomous agents capable of safe, efficient, and human-aware decision-making under uncertainty, with continual adaptation to new environments and tasks. Our research is at the intersection of learning and control and draws innovative connections among several fields to tackle the complex challenges of realizing trustworthy autonomy.
+Prospective Members
+The research at the AKADEMI group is primarily algorithmic and theoretical. The prospective students are expected to have a deep interest and strong background in mathematics, with the essential topics being linear algebra, calculus, real analysis, and probability, and some of the desired topics being stochastic processes, optimization, game theory, combinatorics, and graph theory. The prospective students are also expected to be comfortable with programming. Familiarity with topics in machine learning, control theory, formal methods, and robotics would also be helpful.
+
+If you are a student meeting the above criteria and interested in joining the AKADEMI group, please send an email to me, including
+
+a statement of your motivation for research,
+a description of your research interests, and
+a summary of your relevant learning and research experience, accompanied by a résumé/CV and academic transcripts.
+Please note that due to the number of emails that I receive, unfortunately, I cannot respond to all email inquiries.
+
+Also, if you are applying to the ECE Ph.D. program at Purdue University and are interested in working with me, please indicate this in your application package.
+
+Research:
+My research focuses on theoretical and foundational advancements toward trustworthy sequential decision-making, with the vision of enabling the design of competent, autonomous systems that co-exist with humans, empower them, and are socially, ethically, and economically beneficial. Working at the intersection of learning and control, our group develops new models, algorithms, and theories that make autonomous agents capable of safe, efficient, and human-aware decision-making under uncertainty, with continual adaptation to new environments and tasks. The research problems we are interested in broadly relate to reinforcement learning, active perception, knowledge representation, online learning, control theory, and multi-agent systems. Some applications of interest for the designed solutions are robotics, disaster response, sustainability, healthcare, transportation, and entertainment. The three major directions we currently pursue, along with examples of our high-level methodological approach, are described below.
+
+Active Information-Gathering for Control
+In this direction, we study active identification and gathering of actionable information from large-scale, multi-modal, and noisy data for control tasks. We formulate new classes of control-oriented information-gathering problems and analyze their computational and statistical complexity. We design task-oriented information utility metrics to quantify the importance of different information sources or parts of data given partial, uncertain knowledge about the environment and the task. We also develop efficient algorithms, accompanied by theoretical performance guarantees, to optimize for information utility given the resource constraints.
+
+Compositional and Continual Learning
+In this direction, we study complex planning and learning based on partial and evolving knowledge in real time. We design online learning algorithms with theoretical regret analyses for adaptive decision-making in a variety of settings, including structured bandits and reinforcement learning. We develop principled ways of incorporating structured side knowledge, such as automata-based task representations, probabilistic graphical models, causal models, and game-theoretic structures, to accelerate and improve sequential decision-making. In settings where such structures exist but are unknown a priori, we explore joint learning of these structured knowledge and optimal decision-making strategies.
+
+Human-Aware Learning and Control
+In this direction, we study autonomous decision-making, for instance, for robots and more generally, AI systems, when interacting and collaborating with humans through different modalities. We design learning algorithms that utilize cognitive models to enable the autonomous agent to form a probabilistic understanding of human intent and preferences. We develop adaptive and safe decision-making strategies capable of incorporating the evolving knowledge based on human feedback. Furthermore, we investigate the interpretability and the explainability of the decisions in these human-AI interactive settings and analyze the potential trade-offs between these factors and the performance.
+
+Teaching:
+Purdue University
+ECE 59500: Reinforcement Learning - Theory and Algorithms, Fall 2023 & Fall 2024.
+ECE 49595: Introduction to Reinforcement Learning, Spring 2024.
+ECE 20875: Python for Data Science, Fall 2021, Spring 2022, Fall 2022, & Spring 2023
+
+Contact:
+
+mahsa@purdue.edu
+(765) 494-3553
+Purdue Material Sciences and Electrical Engineering Building, Room 238, West Lafayette, Indiana, 47907, United States

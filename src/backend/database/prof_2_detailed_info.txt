@@ -1,0 +1,30 @@
+Jianghai Hu
+Professor
+School of Electrical and Computer Engineering
+College of Engineering
+Purdue University
+
+Contact:
+Office: MSEE 220
+Tel: 765-496-2395
+Fax: 765-494-3371
+Email: jianghai@purdue.edu
+
+Teaching:
+Spring 2019: ECE 483: Digital Control Systems Analysis and Design
+
+Past semesters
+
+ECE 695: Hybrid Systems Theory and Applications
+ECE 602: Lumped Linear Systems
+ECE 483: Digital Control Systems
+ECE 382: Feedback Control Systems
+ECE 201: Linear Circuit Analysis
+
+Research Areas
+Distributed & Networked Systems
+Hybrid systems
+Control Applications
+Systems under uncertainty 
+Senser networks
+MISC control topics

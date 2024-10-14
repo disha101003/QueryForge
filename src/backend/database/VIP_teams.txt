@@ -1,0 +1,60 @@
+AAMED: Aero Astro MEDicine engineering
+This team will support skill development for students who are interested in space medicine, human performance, space biology, and astrobiology, with the parallel goal of producing meaningful engineering and scientific results in these fields.
+Advisor:
+Curtis Marshall
+Detailed Description:
+This team will support students who are interested in space medicine, human performance, space biology, and astrobiology.  All of this is very important from the perspective of the 2024 NASEM Decadal that emphasizes bioregenerative life support for future space exploration.  Future opportunities in space medicine in the workforce have the capacity to grow, and this team will develop skills and knowledge for students who wish to pursue these opportunities, while producing meaningful engineering and scientific results. This team will have different sub-teams related to astronautics, space medicine, or space life support.  Potential technologies researched could include robotics and microfluidics, among others. 
+ABC-PV: Agri, Building, Car Integrated Solar Photovoltaics
+The survival of our planet depends on, among other things, the effective generation and use of renewable energy. In this project, we will explore experimentally and theoretically how solar modules can be integrated with cities, cars, building, agricultural land, to create a vast/vibrant energy resource for the humanity.
+
+AERO: Aerodynamic research
+Aerodynamic research team goal is to gain thorough knowledge of the state of the art in experimental aerodynamics research through publications and gain hardware skills for further discovery in an academic or industrial research laboratory.
+Advisors:
+Dr. Muhammad Alam
+Dr. Peter Bermel
+Dr. R. Agrawal
+Dr. M. Tuinstra
+Dr. J. Jahangir
+Dr. Juan David Gonzalez Aguayo
+Description:
+Renewable energy plays an important role in reducing global warming, water/air pollution, and land degradation, etc.  We have created a mini-solar farm (with cloud integration and an automated data-acquisition system) that can serve as a test-bed for many Dual-use Photovoltaics (e.g. Agro-Photovoltaics, Car-Integrated PV, Building-integrated PV, Wind-turbine integrated PV, and so on).  Eventually, the mini-farm design should be downloadable (including software and key design components), so that students interested in renewable energy technology  anywhere in the world can use it as a free educational resource and upload location-specific data source for the benefit of everyone.
+Website: https://sites.google.com/view/alam-research-group/home
+Relevant Technologies:
+Computer vision and 3D CAD modeling
+Micro-controller based hardware design and experiments,
+Plant genetics and statistical design of experiments
+Pre-requisite knowledge/skills:
+Basic background with any of the topics will be helpful: Computer coding, micro-controller programming, electronic design, plant genetics, or statistical data analysis, machine learning, etc. One can apply even without specific backgroud, so that one can learn while doing the project. 
+
+AI Omics: Omics and AI for Disease Biomarker Discovery
+This team uses mass spectrometry-based proteomics, machine learning and data visualization strategies to discover disease biomarkers from biofluids for certain diseases
+Faculty Mentors:
+Dr. Marco Hadisurya
+Dr. W. Andy Tao
+Description:
+Centered around high-resolution biological mass spectrometry, we develop biomedical technologies for disease biomarkers from biofluids, such as plasma and urine samples. Aiming at the development of non-invasive diagnosis of cancer and neurodegeneration diseases, we incorporate diverse skills like analytical chemistry, biochemistry, instrumentation, statistics, data science, data visualization, and machine learning for data mining.  Although participants are not required to have biology or chemistry backgrounds, the participants will receive training on analyzing biological data, generating publishable data, and potentially being included as co-authors in high-impact publications. The team will have great opportunities to communicate findings to the general public
+Website: http://www.protaomics.org/ 
+Relevant Technologies:
+Machine Learning
+Analytical Chemistry
+Biochemistry
+Pre-requisite knowledge/skills:
+Machine learning
+Excel
+R, Python, HTML
+
+AIM: Artificial Intelligence in Music
+Using Artificial Intelligence to Transform Music Performers' training and practice. This project will investigate how AI technology could transform the work of future music performers for both individual practice and collaborative practice.
+Advisors:
+Kristen Yeon Ji-Yun
+Yung-Hsiang Lu
+Description:
+This project will develop and integrate techniques to create two AI-enabled tools to support string music performers. The first tool, the Evaluator, aims to improve individual practice and performance. It analyzes a musician’s sound and compares it to digitized music scores to detect deviations in intonation, rhythm, and dynamics and suggest better posture based on sample performers’ recording with correct posture. The second tool, the Companion, plays the part of one or several instruments to replace absent musicians with matching tempo, and style of the human musicians through audio analysis of their performance while also responding in real-time to verbal instructions.
+Website: ai4musicians.org 
+Relevant Technologies:
+Computer Vision
+Natural Language Processing
+Audio Analysis
+Machine Learning
+Pre-requisite knowledge/skills:
+Computer Programming
