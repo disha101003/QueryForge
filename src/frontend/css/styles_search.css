@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+}
+
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-container {
+    margin-top: 20px;
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background: #ccc;
+    width: 50px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0; /* Reset default margin */
+}
+
+.sidebar {
+    background-color: #121212; /* Dark background for sidebar */
+    padding: 20px;
+    width: 200px;
+    min-height: 100vh; /* Full height of the viewport */
+    box-sizing: border-box;
+    color: #ffffff; /* White text color */
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* White text color */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #333333; /* Change background on hover */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+    color: #090909; /* White text color for main content */
+}
+
+.search-container {
+    margin-top: 20px;
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background: #ccc;
+    width: 50px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-container button:hover {
+    background: #aaa; /* Change background on hover */
+}

@@ -4,24 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Research Opportunities at Purdue University</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_search.css') }}">
+    <style>
+        /* Add your styles here */
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
-        <button>Login</button>
-        <button>Home</button>
-        <button>Professor</button>
-        <button>VIP/EPICS</button>
-        <button>DURI</button>
-        <button>Other Research Opportunities</button>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="#" onclick="toggleTab('Professor')">Professor</a>
+        <a href="#" onclick="toggleTab('VIP/EPICS')">VIP/EPICS</a>
+        <a href="#" onclick="toggleTab('DURI')">DURI</a>
+        <a href="#" onclick="toggleTab('Other Research Opportunities')">Other Research Opportunities</a>
     </div>
     <div class="main-content">
         <h1>Discover Research Opportunities at Purdue University</h1>
+        <div id="dynamicTitle" style="display: none;"></div>
         <div class="search-container">
-            <input type="text" placeholder="Search..." id="searchBox">
-            <button onclick="search()">Q</button>
+            <form method="POST" action="{{ url_for('search') }}">
+                <input type="text" name="query" placeholder="Search..." id="searchBox">
+                <button type="submit">Q</button>
+            </form>
         </div>
+        
+        {% if search_result %}
+            <div class="result">
+                <h2>Search Results:</h2>
+                <p>{{ search_result }}</p>
+            </div>
+        {% endif %}
     </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        let highlightedTab = null; // Track the currently highlighted tab
+
+        function toggleTab(tab) {
+            const titleDiv = document.getElementById('dynamicTitle');
+
+            // Check if the clicked tab is the highlighted one
+            if (highlightedTab === tab) {
+                // Deselect the tab
+                highlightedTab = null;
+                titleDiv.style.display = 'none'; // Hide the title
+                return;
+            }
+
+            // Highlight the new tab
+            highlightedTab = tab;
+            titleDiv.innerText = tab; // Set title text
+            titleDiv.style.display = 'block'; // Show the title
+
+            // Optionally, you can also highlight the tab visually
+            const tabs = document.querySelectorAll('.sidebar a');
+            tabs.forEach(t => {
+                t.classList.remove('highlight');
+                if (t.innerText === tab) {
+                    t.classList.add('highlight');
+                }
+            });
+        }
+    </script>
 </body>
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </html>

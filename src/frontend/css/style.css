@@ -14,6 +14,22 @@ body {
     min-height: 100vh;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
+.flash-container {
+    display: flex;
+    justify-content: center;  /* Center align horizontally */
+    align-items: center;      /* Center align vertically */
+    flex-direction: column;   /* Stack messages vertically */
+    margin-top: 20px;         /* Optional: Add some spacing from the top */
+}
+
+.flash-message {
+    color: #333;               /* Optional: Text color */
+    border-radius: 5px;        /* Optional: Rounded corners */
+    padding: 10px 20px;        /* Padding for the message */
+    margin-bottom: 10px;       /* Spacing between messages */
+    text-align: center;        /* Center text within the message box */
+    width: fit-content;        /* Adjust width based on content */
+}
 
 .container {
     background-color: #fff;
