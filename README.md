@@ -5,3 +5,7 @@ Team Memebers
 
 * Stuti Rastogi
 * Disha Maheshwari
+
+To run
+* cd into src/backend folder
+* run python -m app.app
