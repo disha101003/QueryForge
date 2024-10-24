@@ -15,7 +15,7 @@ model = AutoModel.from_pretrained(model_name)
 chunk_size = 400
 para_seperator=" /n /n"
 separator=" "
-top_k = 2
+top_k = 5
 openai_model = ChatOpenAI(model="gpt-3.5-turbo")
 
     
@@ -213,10 +213,13 @@ def response(query):
 
     print(relevant_text)
 
-    # # Uncomment if you have an API key 
-    # response = generate_llm_response(openai_model, query, relevant_text)
-    # print(response)
-    return  relevant_text
+    # Uncomment if you have an API key 
+    response = generate_llm_response(openai_model, query, relevant_text)
+    # Safely extract the content, handling possible key errors
+    content = response.content
+
+    print(content)
+    return content
 
 
 if __name__ == "__main__":

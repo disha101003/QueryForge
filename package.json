@@ -1,0 +1,32 @@
+{
+  "name": "queryforge",
+  "version": "1.0.0",
+  "description": "We intend to develop a web application that conducts an exhaustive search of relevant professors, their current research endeavors, contact information, ongoing projects, and their openness to hiring undergraduate, graduate, and post-doctoral student researchers, among other pertinent details aligned with the research interests of students.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disha101003/QueryForge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/disha101003/QueryForge/issues"
+  },
+  "homepage": "https://github.com/disha101003/QueryForge#readme",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}

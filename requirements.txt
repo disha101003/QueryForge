@@ -11,4 +11,4 @@ requests==2.31.0
 WTForms==3.0.1
 pytest==7.4.0
 flake8
-
+farm-haystack[all]
