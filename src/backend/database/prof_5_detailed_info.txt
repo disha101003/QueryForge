@@ -1,0 +1,100 @@
+Nak-seung Patrick Hyun
+
+I am an assistant professor focusing on the automatic control area at the Elmore School of Electrical and Computer Engineering at Purdue University (Department profile). Prior to joining Purdue, I was a Research Associate (2019-2022) at Harvard Microrobotics Laboratory (hosted by Prof. Robert J. Wood), and a Postdoctoral Fellow (2018-2019) at Harvard Agile Robotics (supervised by Prof. Scott Kuindersma) at Harvard University. I obtained my Ph.D. in Electrical and Computer Engineering at the Georgia Institute of Technology (2018), where I worked with Prof. Erik I. Verriest and Prof. Patricio A. Vela.  I obtained Master's Degrees in Mathematics (2013) and Electrical and Computer Engineering (2013) from the Georgia Institute of Technology. 
+My research program explores the cyclic learning cycle between biology, mathematical system theory, and robotics with an emphasis on control theoretic aspects of bio-inspired robots with extreme behaviors. These include 1) flapping-wing vehicles (e.g., Harvard RoboBee); and 2) impulsive systems inspired by mantis shrimp strikes (e.g., strikes within 4 ms). The intrinsic challenges for such systems with extreme behaviors include complex dynamics with multiple timescales (fast and slow) requiring high-speed sensing for feedback control design. In addition, due to their small size and weight, an understanding of environmental conditions (i.e., fluid conditions) is necessary for controlled motion in unstructured (e.g., outdoor) environments, where current insect-scale robot experiments are limited to indoor environments. 
+
+My goal is to design a robust control framework for such systems with extreme behaviors to overcome the challenges for control in unstructured environments, with a long-term goal of extending these methods toward intelligent swarm robotics. Constructing a novel control framework for these systems will provide a fundamental understanding of high mobility in synthetic systems and provide interdisciplinary research tools for biology.
+CV: https://www.nphyun.com/about/cv
+
+Academic Employment
+
+Assistant Professor (Jan. 2023~) 
+
+Elmore School of Electrical and Computer Engineering, Purdue University, West Lafayette, IN
+
+Research Associate, Harvard Microrobotics Laboratory (Jun. 2021~Dec. 2023) 
+
+Materials Science and Mechanical Engineering, Harvard University, Cambridge, MA Mentor: Robert J. Wood
+
+Postdoctoral Fellow, Harvard Microrobotics Laboratory (Jun. 2019~May. 2021)
+
+Materials Science and Mechanical Engineering, Harvard University, Cambridge, MA Mentor: Robert J. Wood
+
+Postdoctoral Fellow, Harvard Agile Robotics Laboratory (Jun. 2018~May. 2019)
+
+Computer Science, Harvard University, Cambridge, MA Mentor: Scott Kuindersma
+Education
+
+Ph.D., Electrical and Computer Engineering, Georgia Instititue of Technology, 2018
+
+M.S., Mathematics, Georgia Institute of Technology, 2013
+
+M.S., Electrical and Computer Engineering, Georgia Institute of Technology, 2013
+
+B.S., Electrical Engineering, Korea University, 2009
+
+Collaboration distance
+
+    Erdos Number 3 (Paul Erdos - Peter Winkler - Yuval Peres - Nakseung Patrick Hyun)
+
+
+Service and Professional Activities
+
+Chair / Co-Chair 	
+
+IFAC Analysis and Design of Hybrid Systems (2015)
+
+Journals	
+
+    (Reviewer) IEEE Transactions on Automatic Control
+
+    (Reviewer) IFAC Journal of Nonlinear Analysis: Hybrid Systems IEEE Robotics and Automation Letter
+
+    (Reviewer) IEEE/ASME Transactions on Mechatronics
+
+    (Reviewer) International Journal of Control, Automation, and Systems
+
+Conferences
+
+    (Reviewer) IEEE Conference on Decision and Control (2016, 2017, 2019, 2020, 2021) 
+
+    (Reviewer) IEEE American Control Conference (2018, 2019, 2020)
+
+    (Reviewer) IEEE European Control Conference (2016)
+
+    (Reviewer) IFAC International Workshop on Periodic Control Systems (2016)
+
+    (Reviewer) IEEE International Conference on Robotics and Automation (2020, 2021) 
+
+    (Reviewer) IEEE International Conference on Intelligent Robots and Systems (2019,2022)
+
+Teaching Courses at Purdue University
+
+Spring 2023
+
+
+    ECE369 Discrete Mathematics for Computer Engineering
+
+Opportunities
+
+Contact information: 
+
+    Prof. Nak-seung Patrick Hyun
+
+    Office: MSEE 274
+
+    email: nhyun AT purdue DOT edu
+
+    Department profile : Link
+
+Currently enrolled Purdue students: 
+
+Current Ph.D. or M.S. graduate students at Purdue University are highly encouraged to email me directly about your interest and experience along with your most recent CV. I also welcome undergraduate students who want to learn about research in control theory, dynamic modeling, and robotics control. Please email me your interests and background, including the most recent resumes. 
+
+Prospective Purdue students: 
+
+I am highly interested in self-motivated students who wanted to explore control theory, optimization, and bio-inspired robotics control. Please contact Prof. Hyun for possible opportunities. 
+
+Postdoctoral researchers and visiting students: 
+
+I am looking for a passionate Postdoctoral fellow with a strong background in nonlinear control theory and/or experience in UAV control (preferably flapping-wing vehicle but not restricted to it). Please send me a SINGLE PDF, which includes an updated CV, a cover letter describing research interests and goals, a full list of publications, and up to three relevant scientific papers. Please submit the names and contact information for up to three references.
