@@ -1,37 +1,32 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash, check_password_hash
-from rag import response
+from flask import Flask, render_template, request, redirect, url_for, flash
+import sqlite3
 
-app = Flask(__name__, 
-            template_folder='../../frontend/templates', 
-            static_folder='../../frontend')
+app = Flask(__name__,
+            template_folder="../../frontend/templates",
+            static_folder="../../frontend/")
+app.config['SECRET_KEY'] = 'some_random_secret_key'  # For flash messages
+DATABASE = 'users.db'
 
-# Database Configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'  # SQLite DB
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'your_secret_key'
-db = SQLAlchemy(app)
+def get_db():
+    """Connect to the SQLite database."""
+    conn = sqlite3.connect(DATABASE)
+    conn.row_factory = sqlite3.Row  # This allows accessing columns by name
+    return conn
 
-# User Model
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(150), nullable=False)
-    email = db.Column(db.String(150), unique=True, nullable=False)
-    password = db.Column(db.String(150), nullable=False)
+def create_table():
+    """Create the users table if it doesn't exist."""
+    with get_db() as conn:
+        conn.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                username TEXT NOT NULL,
+                email TEXT UNIQUE NOT NULL,
+                password TEXT NOT NULL
+            )
+        ''')
 
-# Initialize Database
-with app.app_context():
-    try:
-        db.create_all()
-        print("Database created successfully.")
-    except Exception as e:
-        print(f"Error creating database: {e}")
-
-@app.route('/')
-def index():
-    return render_template('index.html')  # Render the index.html template
-
+# Create the users table when the application starts
+create_table()
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -40,20 +35,19 @@ def signup():
         email = request.form['email']
         password = request.form['password']
 
-        # Check if email already exists
-        if User.query.filter_by(email=email).first():
-            flash('Email already exists!', 'error')
-            return redirect(url_for('signup'))
+        # Check if the email already exists in the database
+        with get_db() as conn:
+            existing_user = conn.execute('SELECT * FROM users WHERE email = ?', (email,)).fetchone()
 
-        # Hash the password and create a new user
-        hashed_password = generate_password_hash(password, method='sha256')
-        new_user = User(username=username, email=email, password=hashed_password)
-
-        # Add to database
-        db.session.add(new_user)
-        db.session.commit()
-        flash('Sign up successful! Please log in.', 'success')
-        return redirect(url_for('login'))
+        if existing_user:
+            flash('Email already exists! Try logging in.', 'danger')
+        else:
+            # Add the new user to the database
+            with get_db() as conn:
+                conn.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)',
+                             (username, email, password))
+            flash('Signup successful! Please log in.', 'success')
+            return redirect(url_for('login'))
 
     return render_template('signup.html')
 
@@ -63,29 +57,21 @@ def login():
         email = request.form['email']
         password = request.form['password']
 
-        user = User.query.filter_by(email=email).first()
-        if user and check_password_hash(user.password, password):
-            session['user_id'] = user.id  # Store user in session
-            flash(f'Welcome {user.username}!', 'success')
-            return redirect(url_for('search'))
+        # Retrieve the user from the database
+        with get_db() as conn:
+            user = conn.execute('SELECT * FROM users WHERE email = ?', (email,)).fetchone()
+
+        if user and user['password'] == password:
+            flash(f"Welcome back, {user['username']}!", 'success')
+            return redirect(url_for('queryforge'))  # Redirect to the front page
         else:
-            flash('Invalid credentials!', 'error')
+            flash('Invalid credentials! Please try again.', 'danger')
 
-    return render_template('login.html')
+    return render_template('index.html')
 
-@app.route('/search', methods=['GET', 'POST'])
-def search():
-    if 'user_id' not in session:
-        flash('Please log in first!', 'warning')
-        return redirect(url_for('login'))
-    
-    search_result = None  # Initialize search_result
-    if request.method == 'POST':
-        query = request.form.get('query')
-        search_result = response(query)  # Call your search function with the query
-
-    return render_template('search.html', search_result=search_result)  # Pass the result to the template
-
+@app.route('/search')
+def queryforge():
+    return render_template('search.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
