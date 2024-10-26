@@ -1,0 +1,22 @@
+Vijay Gupta
+
+I am a Professor of Electrical and Computer Engineering at Purdue University having joined in 2022. Previously I served on the faculty at the University of Notre Dame as a Professor of Electrical Engineering and a concurrent Professor of Aerospace and Mechanical Engineering. I received my B. Tech degree at the Indian Institute of Technology, Delhi, and my M.S. and Ph.D. degrees at the California Institute of Technology, all in Electrical Engineering. I previously served as a research associate in the Institute for Systems Research at the University of Maryland, College Park, a consultant at the United Technologies Research Center, and as the Associate Chair and the Director for Graduate Studies in the Department of Electrical Engineering at Notre Dame.
+
+My current research interests are in the broad area of distributed decision making, using both data-driven and model-driven approaches, with applications to the emerging smart and integrated architecture of societal infrastructure such as transportation networks, power grid, and water distribution networks. Topics of interest include developing learning approaches suitable for control, compositional control for large scale systems, cyber-physical security and privacy, and incentive design in distributed estimation and control. 
+
+CV: https://engineering.purdue.edu/Vijay-Gupta/cv.pdf
+
+
+Contact Info
+
+Vijay Gupta
+Professor of Electrical and Computer Engineering
+gupta869 at purdue dot edu
+Address
+Purdue University
+Elmore Family School of Electrical and Computer Engineering
+Electrical Engineering Building
+465 Northwestern Ave.
+West Lafayette, Indiana 47907-2035
+
+ 

@@ -1,0 +1,46 @@
+C. S. George Lee
+
+Professor of Electrical and Computer Engineering
+Campus: West Lafayette
+Office: MSEE 256
+Office Phone: +1 765-494-1384
+Fax: +1 765-494-6951
+E-mail: csglee@purdue.edu
+Webpage: https://engineering.purdue.edu/artlab
+
+C. S. George Lee received the B.S. and M.S. degrees in Electrical Engineering from Washington State University in 1973 and 1974, respectively, and the PhD degree from Purdue University, West Lafayette, IN in 1978.
+In 1978-1979, he taught at Purdue University, and in 1979-1985, at the University of Michigan. Since 1985, he has been with the School of Electrical and Computer Engineering, Purdue University, where he is currently Professor of Electrical and Computer Engineering.
+His current research focuses on humanoid robotics, distributed mobile robots, and neuro-fuzzy systems. He has authored or co-authored over 150 publications in these areas, in addition to 20 book chapters and two graduate textbooks:
+
+Robotics: Control, Sensing, Vision, and Intelligence
+Neural Fuzzy Systems: Neuro-Fuzzy Synergism to Intelligent Systems (Prentic-Hall PTR, 1996, ISBN 0-13-235169-2).
+Tutorial on Robotics (Second Edition) (IEEE Computer Society Press).
+
+Dr. Lee was an IEEE Computer Society Distinguished Visitor in 1983-1986, the Organizer and Chairman of the 1988 NATO Advanced Research Workshop on Sensor-Based Robots: Algorithms and Architectures. He also served as Secretary and Vice-President for Technical Affairs of the IEEE Robotics and Automation Society (RAS) in 1988-1990 and 1990-1995, respectively. He was Program Chair of the 1996 IEEE International Conference on Robotics and Automation in Minneapolis, MN and the 1998 IEEE/RSJ International Conference on Intelligent Robots and Systems in Victoria, B.C., Canada.
+
+Dr. Lee served as an Administrative Committee member and a Distinguished Lecturer of the IEEE RAS, and the General Chair of the 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems held in Las Vegas, Nevada, on October 26-31, 2003. He currently serves as General Co-Chair of the 2006 IEEE International Conference on Robotics and Automation to be held in Orlando, Florida, on May 15-19, 2006.
+
+Dr. Lee has directed over 20 Ph.D. dissertations. He is an IEEE Fellow and a recipient of the IEEE Third Millennium Medal Award.
+
+
+His Lab:
+
+Assistive Robotics Technology Lab (ARTLab), a multidisciplinary robotics research laboratory, focuses on research and development of enabling technologies for assistive robots for various applications.
+
+Currently, our research projects focus on:
+
+    Transfer learning for efficient machine learning
+    Learning time-variant graph-structured models for robotics
+    Deep reinforcement learning for robotics
+    Brain-Computer-Interface (BCI)-based information systems
+    Humanoid robotics
+    Educational and outreach activities
+
+Previous research projects were:
+
+    Human-activity recognition
+    Perception and adaptation for human-robot interaction
+    Software design and development for humanoid robot control and simulations
+    Self-organizing skill learning algorithms
+    Dynamic robotic sensor networks
+
