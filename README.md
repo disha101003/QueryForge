@@ -23,7 +23,6 @@ The application follows a multi-tier architecture, consisting of:
 4. **Web Scraping Module**: Pulls data from university websites and professor pages using `BeautifulSoup` and `Requests`.
 5. **Resume Parser Module**: Extracts and analyzes text from user resumes to match with relevant projects.
 
-## Getting Started
 ### Prerequisites
 - **Python 3.8+**
 - **Flask** (for backend)
@@ -55,10 +54,10 @@ The resume parser allows users to upload their resumes in `.pdf` or `.docx` form
 2. **Identifies Keywords**: Processes text with `NLTK` to identify high-frequency terms like skills and research interests.
 3. **Matches to Projects**: Compares extracted keywords with project descriptions to recommend suitable opportunities.
 
-### Key Challenges
+## Key Challenges
 1. **Data Inconsistency**: Different formatting across resumes and web pages requires adjustments to extraction and parsing logic.
 2. **Privacy**: Sensitive data handling for uploaded resumes, mitigated by encryption and access control.
 
-To run
+## To run
 * cd into src/backend folder
 * run python -m app.app
