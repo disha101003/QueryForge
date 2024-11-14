@@ -13,7 +13,7 @@ As students, we understand the challenge of finding research opportunities due t
 - **Research Opportunity Aggregation**: Gathers data on professors, research projects, and student openings across the ECE department.
 - **Resume Parser**: Enables users to upload their resumes, extract key skills and qualifications, and match them with relevant research projects.
 - **Advanced Search and Filtering**: Allows users to search and filter opportunities based on research interests, professor details, and project type.
-- **User Role Management**: Role-based access control for managing data access and security.
+
 
 ## Architecture
 The application follows a multi-tier architecture, consisting of:
@@ -45,7 +45,7 @@ The application follows a multi-tier architecture, consisting of:
 
 ## Data Sources
 The web application aggregates data from various sources:
-1. **University Research Sites**: VIP/EPICS project pages, Purdue faculty directories, etc.
+1. **Purdue Research Sites**: VIP/EPICS project pages, Purdue faculty directories, etc.
 2. **Professor Profiles**: Data pulled directly from Purdue professors' lab websites for up-to-date research information.
 
 ## Resume Parser

@@ -8,8 +8,7 @@ QueryForge web application helps students and researchers find suitable research
 
 ## Accessing the Application
 1. **Open the Web Application**: Go to the application URL (http://3.142.98.164:5000/) in your preferred web browser.
-2. **Login**: Sign in using your credentials. If you are new to the the application, you will be asked to create an account. You may be assigned a role, such as a student or administrator, based on your account.
-
+2. **Login**: Sign in using your credentials. If you are new to the the application, you will be asked to create an account.
 ---
 
 ## Features and Usage
@@ -42,12 +41,6 @@ After applying filters, click **Apply** to see refined results.
 - **Project Matches**: After parsing, the application will display research projects that align with the keywords in your resume.
 - **Save Matches**: You can save preferred projects to a **Favorites** list for quick access later.
 
-
----
-
-## User Roles
-- **Student**: Basic access to search, filter, and view research projects, upload resumes, and save preferred matches.
-- **Admin**: Additional privileges to add or update professor and project information, view user analytics, and manage access permissions.
 
 ---
 
