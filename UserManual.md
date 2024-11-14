@@ -19,16 +19,13 @@ QueryForge web application helps students and researchers find suitable research
 
 ### Searching for Research Opportunities
 1. **Enter Search Terms**: Type keywords or research areas into the search bar to find related projects or professors.
-2. **Search Suggestions**: The app may suggest keywords based on popular search terms, such as “Machine Learning,” “Robotics,” or “Data Science.”
 
-### Filtering Results
-- Use filters to narrow search results based on:
+### Results
+- Use tabs to narrow search results based on:
   - **Professor**: Shows projects supervised by specific professors.
   - **Project Type**: VIP/EPICS or professor-mentored projects.
-  - **Position Type**: Undergraduate, graduate, or post-doctoral opportunities.
-  - **Availability**: Current availability status for positions.
 
-After applying filters, click **Apply** to see refined results.
+After using the tabs, click **Search** to see refined results.
 
 ### Uploading a Resume for Parsing
 1. **Navigate to the Resume Parsing Section**: Access this through the main menu.
@@ -37,18 +34,16 @@ After applying filters, click **Apply** to see refined results.
 
 > **Note**: For optimal parsing, ensure your resume is formatted simply, with clear sections such as **Experience**, **Education**, and **Skills**.
 
-### Viewing and Saving Matches
+### Viewing Matches
 - **Project Matches**: After parsing, the application will display research projects that align with the keywords in your resume.
-- **Save Matches**: You can save preferred projects to a **Favorites** list for quick access later.
-
 
 ---
 
 ## Support
 For assistance or inquiries:
 - Contact the team:
--**Stuti Rastogi**: rastogi8@purdue.edu
--**Disha Maheshwari**: dsmahesh@purdue.edu
+- **Stuti Rastogi**: rastogi8@purdue.edu
+- **Disha Maheshwari**: dsmahesh@purdue.edu
 
 
 **Thank you for using the QueryForge!** This tool is designed to make your research search journey easier and more efficient.
