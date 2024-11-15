@@ -8,9 +8,13 @@ Welcome! We’re excited to have you contribute to this project. This guide will
 2. [Setting Up the Project](#setting-up-the-project)
 3. [Contribution Guidelines](#contribution-guidelines)
 4. [Code Style and Best Practices](#code-style-and-best-practices)
-5. [Running Tests](#running-tests)
+5. [Running Tests and Application locally](#running-tests)
 6. [Submitting a Pull Request](#submitting-a-pull-request)
-
+7. [Packaging the application](#packaging-the-application)
+8. [Versioning](#versioning)
+9. [Pushing the docker image to AWS ecr](#pushing-the-docker-image-to-aws-ecr)
+10. [Deploying to AWS ECS](#deploying-to-aws-ecs)
+11. [version visibility](#version-visibility)
 ---
 
 ## Directory Structure
@@ -58,7 +62,10 @@ To set up the project on your local machine:
    git clone https://github.com/disha101003/QueryForge
    ```
 
-2. Install required dependencies (e.g., using pip for Python or npm for JavaScript).
+2. Install required dependencies
+  ```bash
+   pip install -r requirements.txt
+   ```
 
 3. Set up environment variables based on config files in the src/backend/config folder.
 
@@ -67,7 +74,6 @@ To set up the project on your local machine:
 ## Code Style and Best Practices
 
 * **Python Code:** Follow PEP 8 guidelines
-* **JavaScript Code:** Use ESLint to ensure consistent style
 * **CSS:** Follow BEM (Block Element Modifier) naming conventions for classes
 
 ## Contribution Process
@@ -88,7 +94,7 @@ pytest
 
 This will execute all tests and provide a coverage report.
 
-## Additional Commands
+## Commands to run the application locally
 
 To run the application:
 
@@ -118,7 +124,7 @@ To run the application:
 4. Create a Pull Request:
    * Go to the main repository and open a pull request
 
-# Packaging, Versioning, and Deployment with AWS ECR and ECS
+## Packaging, Versioning, and Deployment with AWS ECR and ECS
 
 This section outlines the complete process for packaging your application into a Docker container, managing versioning, and deploying the containerized application to AWS Elastic Container Service (ECS) via Elastic Container Registry (ECR). The workflow ensures consistent deployment and seamless version control.
 
