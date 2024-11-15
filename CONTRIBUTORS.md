@@ -4,17 +4,30 @@ Welcome! We’re excited to have you contribute to this project. This guide will
 
 ## Table of Contents
 
+## Table of Contents
+
 1. [Directory Structure](#directory-structure)
 2. [Setting Up the Project](#setting-up-the-project)
 3. [Contribution Guidelines](#contribution-guidelines)
 4. [Code Style and Best Practices](#code-style-and-best-practices)
 5. [Running Tests and Application locally](#running-tests)
 6. [Submitting a Pull Request](#submitting-a-pull-request)
-7. [Packaging the Application](#1.-packaging-the-application)
-8. [Versioning](#2.-versioning)
-9. [Pushing the docker image to AWS ECR](#3.-pushing-the-docker-image-to-aws-ecr)
-10. [Deploying to AWS ECS](#4.-deploying-to-aws-ecs)
-11. [Version Visibility](#5.-version-visibility)
+7. [Packaging the Application](#1-packaging-the-application)
+   - [Docker Image Creation](#step-11-docker-image-creation)
+8. [Versioning](#2-versioning)
+   - [Semantic Versioning](#semantic-versioning)
+   - [Current Version](#current-version)
+9. [Pushing the Docker Image to AWS ECR](#3-pushing-the-docker-image-to-aws-ecr)
+   - [Create an ECR Repository](#step-31-create-an-ecr-repository)
+   - [Authenticate Docker with ECR](#step-32-authenticate-docker-with-ecr)
+   - [Tag and Push the Docker Image](#step-33-tag-and-push-the-docker-image)
+10. [Deploying to AWS ECS](#4-deploying-to-aws-ecs)
+   - [Create an ECS Cluster](#step-41-create-an-ecs-cluster)
+   - [Register a Task Definition](#step-42-register-a-task-definition)
+   - [Run a Task](#step-43-run-a-task)
+   - [Create a Service (Optional)](#step-44-create-a-service-optional)
+11. [Version Visibility](#5-version-visibility)
+
 ---
 
 ## Directory Structure
