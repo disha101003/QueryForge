@@ -10,11 +10,11 @@ Welcome! We’re excited to have you contribute to this project. This guide will
 4. [Code Style and Best Practices](#code-style-and-best-practices)
 5. [Running Tests and Application locally](#running-tests)
 6. [Submitting a Pull Request](#submitting-a-pull-request)
-7. [Packaging the Application](#packaging-the-application)
-8. [Versioning](#versioning)
-9. [Pushing the docker image to AWS ECR](#pushing-the-docker-image-to-aws-ecr)
-10. [Deploying to AWS ECS](#deploying-to-aws-ecs)
-11. [Version Visibility](#version-visibility)
+7. [Packaging the Application](#1.-packaging-the-application)
+8. [Versioning](#2.-versioning)
+9. [Pushing the docker image to AWS ECR](#3.-pushing-the-docker-image-to-aws-ecr)
+10. [Deploying to AWS ECS](#4.-deploying-to-aws-ecs)
+11. [Version Visibility](#5.-version-visibility)
 ---
 
 ## Directory Structure
