@@ -3,10 +3,15 @@ This web application aims to streamline the process of discovering research oppo
 
 As students, we understand the challenge of finding research opportunities due to scattered information. This tool provides a centralized database with enhanced search and filtering functionalities, tailored to support students in the ECE department, with plans to expand to additional departments.
 
-## Team Memebers
+## Team Members
 
 * Stuti Rastogi
 * Disha Maheshwari
+
+
+## Accessing the Application
+1. **Open the Web Application**: Go to the application URL (http://3.142.98.164:5000/) in your preferred web browser.
+2. **Login**: Sign in using your credentials. If you are new to the application, you will be asked to create an account.
 
 
 ## Features
@@ -23,13 +28,8 @@ The application follows a multi-tier architecture, consisting of:
 4. **Web Scraping Module**: Pulls data from university websites and professor pages using `BeautifulSoup` and `Requests`.
 5. **Resume Parser Module**: Extracts and analyzes text from user resumes to match with relevant projects.
 
-### Prerequisites
-- **Python 3.8+**
-- **Flask** (for backend)
-- **BeautifulSoup** and **Requests** (for web scraping)
-- **NLTK** (for resume parsing)
-- **PyPDF2** and **pdfplumber** (for PDF handling)
-  
+### Install Dependencies
+- Use the following command to install the required Python libraries: `pip install -r requirements.txt`
 
 ## Usage
 1. **Search for Opportunities**: Use the search bar and filters on the homepage to find research opportunities by professors or project areas.
@@ -58,6 +58,11 @@ The resume parser allows users to upload their resumes in `.pdf` or `.docx` form
 1. **Data Inconsistency**: Different formatting across resumes and web pages requires adjustments to extraction and parsing logic.
 2. **Privacy**: Sensitive data handling for uploaded resumes, mitigated by encryption and access control.
 
-## To run
-* cd into src/backend folder
-* run python -m app.app
+## Support
+For assistance or inquiries:  
+Contact the team:
+- **Stuti Rastogi**: rastogi8@purdue.edu
+- **Disha Maheshwari**: dsmahesh@purdue.edu
+
+
+**Thank you for using the QueryForge!** This tool is designed to make your research search journey easier and more efficient.
