@@ -317,4 +317,4 @@ aws ecs create-service \
 ## 5. Version Visibility
 
 - **Docker Image Metadata:** The version is embedded in the image tag (e.g., `v0.5.0`) for easy reference.
-- **Application UI:** Display the version number in the application’s footer (implementation pending).
+- **Application UI:** Display the version number in the application’s footer.
