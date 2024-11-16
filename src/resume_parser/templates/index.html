@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Keyword Extractor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Keyword Extractor</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" accept=".pdf,.docx" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="keywords"></div>
+    </div>
+    <script>
+        document.getElementById('uploadForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append('file', document.getElementById('fileInput').files[0]);
+
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            document.getElementById('keywords').innerHTML = '<h2>Keywords:</h2><ul>' + 
+                result.keywords.map(keyword => `<li>${keyword[0]} (${keyword[1]} times)</li>`).join('') + '</ul>';
+        }
+    </script>
+</body>
+</html>
