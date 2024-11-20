@@ -1,37 +1,66 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash, check_password_hash
-from rag import response
+from flask import Flask, render_template, request, redirect, url_for, flash
+import sqlite3
+import os
+from werkzeug.utils import secure_filename
+import docx
+from PyPDF2 import PdfReader
+from collections import Counter
 
-app = Flask(__name__, 
-            template_folder='../../frontend/templates', 
-            static_folder='../../frontend')
+app = Flask(__name__,
+            template_folder="../../frontend/templates",
+            static_folder="../../frontend/")
+app.config['SECRET_KEY'] = 'some_random_secret_key' 
+app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'docx'}
+DATABASE = 'users.db'
 
-# Database Configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'  # SQLite DB
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'your_secret_key'
-db = SQLAlchemy(app)
+# Ensure the upload folder exists
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-# User Model
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(150), nullable=False)
-    email = db.Column(db.String(150), unique=True, nullable=False)
-    password = db.Column(db.String(150), nullable=False)
+def get_db():
+    """Connect to the SQLite database."""
+    conn = sqlite3.connect(DATABASE)
+    conn.row_factory = sqlite3.Row 
+    return conn
 
-# Initialize Database
-with app.app_context():
-    try:
-        db.create_all()
-        print("Database created successfully.")
-    except Exception as e:
-        print(f"Error creating database: {e}")
+def create_table():
+    """Create the users table if it doesn't exist."""
+    with get_db() as conn:
+        conn.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                username TEXT NOT NULL,
+                email TEXT UNIQUE NOT NULL,
+                password TEXT NOT NULL
+            )
+        ''')
 
-@app.route('/')
-def index():
-    return render_template('index.html')  # Render the index.html template
 
+create_table()
+
+def allowed_file(filename):
+    """Check if the uploaded file is allowed."""
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
+def extract_text_from_docx(file_path):
+    """Extract text from a .docx file."""
+    doc = docx.Document(file_path)
+    return "\n".join(paragraph.text for paragraph in doc.paragraphs)
+
+def extract_text_from_pdf(file_path):
+    """Extract text from a PDF file."""
+    pdf_reader = PdfReader(file_path)
+    return "\n".join(page.extract_text() for page in pdf_reader.pages)
+
+def extract_keywords(text):
+    """Extract important keywords from the text."""
+    words = text.split()
+    common_keywords = ['python', 'java', 'c++', 'machine learning', 'data analysis', 'teamwork', 'project management']
+    found_keywords = [word.lower() for word in words if word.lower() in common_keywords]
+    if not found_keywords:
+        return ["No keywords found"]
+
+    return list(Counter(found_keywords).keys())
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -40,20 +69,19 @@ def signup():
         email = request.form['email']
         password = request.form['password']
 
-        # Check if email already exists
-        if User.query.filter_by(email=email).first():
-            flash('Email already exists!', 'error')
-            return redirect(url_for('signup'))
+        
+        with get_db() as conn:
+            existing_user = conn.execute('SELECT * FROM users WHERE email = ?', (email,)).fetchone()
 
-        # Hash the password and create a new user
-        hashed_password = generate_password_hash(password, method='sha256')
-        new_user = User(username=username, email=email, password=hashed_password)
-
-        # Add to database
-        db.session.add(new_user)
-        db.session.commit()
-        flash('Sign up successful! Please log in.', 'success')
-        return redirect(url_for('login'))
+        if existing_user:
+            flash('Email already exists! Try logging in.', 'danger')
+        else:
+            
+            with get_db() as conn:
+                conn.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)',
+                             (username, email, password))
+            flash('Signup successful! Please log in.', 'success')
+            return redirect(url_for('login'))
 
     return render_template('signup.html')
 
@@ -63,29 +91,54 @@ def login():
         email = request.form['email']
         password = request.form['password']
 
-        user = User.query.filter_by(email=email).first()
-        if user and check_password_hash(user.password, password):
-            session['user_id'] = user.id  # Store user in session
-            flash(f'Welcome {user.username}!', 'success')
-            return redirect(url_for('search'))
+       
+        with get_db() as conn:
+            user = conn.execute('SELECT * FROM users WHERE email = ?', (email,)).fetchone()
+
+        if user and user['password'] == password:
+            flash(f"Welcome back, {user['username']}!", 'success')
+            return redirect(url_for('queryforge'))  
         else:
-            flash('Invalid credentials!', 'error')
+            flash('Invalid credentials! Please try again.', 'danger')
 
-    return render_template('login.html')
+    return render_template('index.html')
 
-@app.route('/search', methods=['GET', 'POST'])
-def search():
-    if 'user_id' not in session:
-        flash('Please log in first!', 'warning')
-        return redirect(url_for('login'))
-    
-    search_result = None  # Initialize search_result
+@app.route('/search')
+def queryforge():
+    return render_template('search.html')
+
+@app.route('/resume-parser', methods=['GET', 'POST'])
+def resume_parser():
     if request.method == 'POST':
-        query = request.form.get('query')
-        search_result = response(query)  # Call your search function with the query
+        if 'resume' not in request.files:
+            flash('No file part', 'danger')
+            return redirect(request.url)
+        file = request.files['resume']
+        if file.filename == '':
+            flash('No selected file', 'danger')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(file_path)
 
-    return render_template('search.html', search_result=search_result)  # Pass the result to the template
+            # Extract text based on file type
+            if filename.endswith('.docx'):
+                text = extract_text_from_docx(file_path)
+            elif filename.endswith('.pdf'):
+                text = extract_text_from_pdf(file_path)
+            else:
+                flash('Unsupported file format!', 'danger')
+                return redirect(request.url)
 
+            # Extract keywords
+            keywords = extract_keywords(text)
+            flash(f'Keywords extracted: {keywords}', 'success')
+            return render_template('resume_parser.html', keywords=keywords)
+
+        flash('Invalid file type! Only PDF and DOCX are allowed.', 'danger')
+
+    return render_template('resume_parser.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
