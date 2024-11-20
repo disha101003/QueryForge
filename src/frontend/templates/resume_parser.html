@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+    <link rel="stylesheet" href="frontend/static/css/style_resume.css">
+    > 
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <a href="/signup">Signup</a>
+        <a href="/login">Login</a>
+        <a href="/search">Search</a>
+        <a href="/resume-parser">Resume Parser</a>
+    </div>
+    <div class="main-content">
+        <h1>Resume Parser</h1>
+        <div class="upload-container">
+            <form action="/resume-parser" method="POST" enctype="multipart/form-data">
+                <input type="file" name="resume" accept=".pdf,.docx" required>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+        
+        {% if keywords %}
+        <div id="keywords-container" class="keywords-container">
+            <h2>Extracted Keywords</h2>
+            {% if keywords == ['No keywords found'] %}
+                <p>No keywords found in the resume.</p>
+            {% else %}
+                <ul id="keywords-list">
+                    {% for keyword in keywords %}
+                        <li>{{ keyword }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        {% else %}
+        <p>Upload a resume to extract keywords.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
