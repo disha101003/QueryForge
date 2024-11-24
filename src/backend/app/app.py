@@ -80,6 +80,8 @@ def extract_keywords(text):
     
     return dict(Counter(found_keywords))
 
+# Create the users table when the application starts
+create_table()
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
