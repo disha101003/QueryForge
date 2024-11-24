@@ -5,14 +5,17 @@ from werkzeug.utils import secure_filename
 import docx
 from PyPDF2 import PdfReader
 from collections import Counter
+import re
+ALLOWED_EXTENSIONS = {'docx'}
 
 app = Flask(__name__,
             template_folder="../../frontend/templates",
             static_folder="../../frontend/")
 app.config['SECRET_KEY'] = 'some_random_secret_key' 
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'docx'}
+app.config['ALLOWED_EXTENSIONS'] = {'docx'}
 DATABASE = 'users.db'
+
 
 # Ensure the upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
@@ -47,20 +50,36 @@ def extract_text_from_docx(file_path):
     doc = docx.Document(file_path)
     return "\n".join(paragraph.text for paragraph in doc.paragraphs)
 
-def extract_text_from_pdf(file_path):
-    """Extract text from a PDF file."""
-    pdf_reader = PdfReader(file_path)
-    return "\n".join(page.extract_text() for page in pdf_reader.pages)
 
 def extract_keywords(text):
-    """Extract important keywords from the text."""
-    words = text.split()
-    common_keywords = ['python', 'java', 'c++', 'machine learning', 'data analysis', 'teamwork', 'project management']
-    found_keywords = [word.lower() for word in words if word.lower() in common_keywords]
+    """Extract important keywords and phrases from the text."""
+    # Predefined list of common skills (single words and multi-word phrases)
+    common_keywords = [
+        'python', 'java', 'c++', 'machine learning', 'data analysis', 'teamwork', 
+        'project management', 'artificial intelligence', 'software development', 
+        'deep learning', 'cloud', 'agile', 'scrum', 'big data', 'data science', 
+        'sql', 'react', 'nodejs', 'devops', 'github', 'docker', 'kubernetes', 
+        'html', 'css', 'javascript', 'api', 'typescript', 'automation', 
+        'cloud computing', 'aws', 'azure', 'saas', 'data visualization', 'etl', 
+        'data engineer', 'problem-solving', 'leadership', 'communication'
+    ]
+    
+    # Preprocess text: normalize case, remove special characters
+    normalized_text = text.lower()
+    
+    # Use regex to find both words and phrases
+    found_keywords = []
+    for keyword in common_keywords:
+        # Escape keywords for regex and search as whole words/phrases
+        if re.search(r'\b' + re.escape(keyword) + r'\b', normalized_text):
+            found_keywords.append(keyword)
+
+    # Count occurrences of keywords/phrases
     if not found_keywords:
         return ["No keywords found"]
+    
+    return dict(Counter(found_keywords))
 
-    return list(Counter(found_keywords).keys())
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -107,6 +126,9 @@ def login():
 def queryforge():
     return render_template('search.html')
 
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 @app.route('/resume-parser', methods=['GET', 'POST'])
 def resume_parser():
     if request.method == 'POST':
@@ -121,12 +143,11 @@ def resume_parser():
             filename = secure_filename(file.filename)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
-
+            
             # Extract text based on file type
             if filename.endswith('.docx'):
                 text = extract_text_from_docx(file_path)
-            elif filename.endswith('.pdf'):
-                text = extract_text_from_pdf(file_path)
+        
             else:
                 flash('Unsupported file format!', 'danger')
                 return redirect(request.url)
@@ -136,9 +157,8 @@ def resume_parser():
             flash(f'Keywords extracted: {keywords}', 'success')
             return render_template('resume_parser.html', keywords=keywords)
 
-        flash('Invalid file type! Only PDF and DOCX are allowed.', 'danger')
+        flash('Invalid file type! Only DOCX are allowed.', 'danger')
 
     return render_template('resume_parser.html')
-
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
