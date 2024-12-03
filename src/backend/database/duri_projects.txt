@@ -1,0 +1,284 @@
+
+Project:
+Opportunities and Risks of Biometric Security in the Age of Generative AI
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Global Security
+Description:
+With the emergence of the Internet of Things (IoT), smart sensing devices ranging from smart wearables, such as Fitbits or Apple watches, to smartphones are packed with a range of sensors helping us with a range of services from unlocking cars and homes to validating financial transactions, among several other services. But often, these services are delivered based on a user’s sensitive personal information, including demographic identity and various biometric data, ranging from heart rate to breathing patterns. Therefore, researchers have been using this biometric data to validate a user. However, in the age of Generative AI, it is possible to produce synthetic data. Hence, it is important to understand how biometric samples can be fatal in predicting a user’s identity and his/her entire cyber-physical space, which has been secured with those biometrics in order to foster global security.
+Supervisor:
+Sudip Vhaduri
+Mentor:
+Sudip Vhaduri
+Type of work required:
+Working with an interdisciplinary research team, in this project, students will first process various types of data, e.g., heart rate, gait, and breathing patterns, among several others obtained from smartphones and smart wearables. Then, students will visualize and compute different features. Finally, students will develop machine learning and AI models to generate synthetic data that can be used to breach an authentication model developed with the user’s original data. During this project, student researchers will be closely guided in every step, including problem formulation, data processing and characterizations, statistical analysis, and data visualization, model development, and interpretation of findings. Participating in this project, our student researchers will achieve technical expertise to solve real-world problems. The students will also get a clear idea of how their scientific discovery contributes to the entire community in terms of securing their cyber-physical space.
+Websites:
+https://sudipvhaduri.wordpress.com/user-authentication-project-2020-present/
+Qualifications:
+Students should be in good academic standing. Students are expected to have some experience with machine learning and/or AI modeling using Scikit learn, Tensorflow, or similar frameworks. Online Citi training/certification will be needed before starting the internship since this work involves human subjects.
+Credit Hours:
+0
+Weekly Hours:
+12 (estimated) 
+
+
+
+Project:
+Visualize Music using Generative Models of Artificial Intelligence
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Artificial Intelligence, Generative Models, Music, Hear Impaired
+Description:
+This project belongs to the strategic area of global health. Playing and listening to music is one of the most universal forms of communication and entertainment across cultures. Unfortunately, many people are hearing-impaired, unable to fully enjoy music. By 2050, nearly 2.5 billion people are projected to have some degree of hearing loss, and at least 700 million will require hearing rehabilitation (source: World Health Organization). This project aims to create technologies that visualize music, assisting the hearing-impaired in understanding and enjoying music. The technical process comprises the following steps: (a) Music is analyzed and classified into multiple dimensions, including instrumentation, emotion, tempo, pitch range, harmony, dynamics, and more. This analysis yields textual descriptions. (b) The texts form features and are inputs to machine learning models for classification. (c) These models predict the genre of the input audio and its associated emotions. These predictions form the basis for text prompts that describe the music. (d) The prompts are fed into generative machine models (e.g., DALL-E-2, Stable Diffusion, and Midjourney) to create visual representations, such as images or videos. (e) The visual representations are continuously updated as the music plays, ensuring that the visual effects aptly mirror the musical changes. Variations in the prompts produce different styles of images. These images and videos are generated without human intervention, significantly reducing costs and time to produce visual representations tailored to the specific piece of music. This approach is different from video recordings of music performance because recordings can provide only passive watching experience. In contrast, the proposed solution has the advantage of creating personalized and interactive entertainment experience for the hearing-impaired. This proposed project will conduct extensive user studies to evaluate whether generative models can effectively produce visual representations of music's rich expression, heralding a novel form of entertainment for the hearing-impaired.
+Supervisor:
+Yung-hsiang Lu
+Mentor:
+Yung-hsiang Lu
+Type of work required:
+The students will (1) conduct literature survey to understand the state of the art using generative artificial intelligence for entertainment, (2) develop software that implements the steps mentioned in the description, (3) evaluate the efficacy of proposed solution (in the form of user studies), (4) design a website to promote generative arts used in entertainment.
+Websites:
+https://ai4musicians.org/
+Qualifications:
+has taken at least one programming course
+Credit Hours:
+2
+Weekly Hours:
+10 (estimated) 
+
+
+
+Project:
+AI-Driven Walkability Ecosystem: Enhancing Public Health through Personalized, Social, and Adaptive Mobility Solutions
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Artificial Intelligence; Large Language Models; Human Computer Interaction; Decision Support
+Description:
+This project proposes the development of an AI-Driven Walkability Ecosystem, a personalized, real-time mobile application designed to enhance walkability and public health by integrating adaptive technology with social and behavioral insights. The app will leverage artificial intelligence (AI) to provide personalized walking experiences tailored to individual health profiles, real-time environmental conditions, and personal preferences. By incorporating both psychological engagement strategies and social motivation, the app aims to promote sustained walking habits, improve physical health outcomes, and create healthier urban communities.
+Supervisor:
+Gaurav Nanda
+Mentor:
+Gaurav Nanda
+Type of work required:
+The student is expected to develop a prototype mobile application interfacing with Large Language Models, Maps, Health App, and few other mobile applications.
+Qualifications:
+Programming skills in the areas of developing mobile application, LLM powered chatbots, and using LLM and Map APIs.
+Credit Hours:
+0
+Weekly Hours:
+5 (estimated) 
+
+
+
+Project:
+Software Development for Cardiovascular Image Analysis in Duchenne Muscular Dystrophy
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Biomedical engineering, cardiovascular imaging
+Description:
+Duchenne Muscular Dystrophy (DMD) is a recessive progressive neuromuscular disease that predominantly affects boys. Cardiovascular complications are the leading cause of death in these patients, and early identification of cardiac muscle impairment is critical, as it enables timely prophylactic treatment with cardioprotective medications. The goal of this project is to enhance cardiac disease diagnosis and monitoring in DMD by developing software to analyze images from different modalities, such as 4D (3D + time) Ultrasound and Magnetic Resonance Imaging. Our aim is to provide clinicians with tools for early intervention, as well as enable complex analysis frameworks in research environments, furthering the understanding of cardiovascular mechanics.
+Supervisor:
+Marco Aurelio Conde Oliveira Prado
+Mentor:
+Marco Aurelio Conde Oliveira Prado
+Type of work required:
+Students assisting with this project would be working on the development of medical image analysis software. Tasks include designing graphical user interfaces for end-users, creating image analysis scripts and developing machine learning models for image segmentation and disease progression prediction.
+Websites:
+https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)#:~:text=Cardiovascular%20diseases%20(CVDs)%20are%20the,%2D%20and%20middle%2Dincome%20countries.
+https://engineering.purdue.edu/cvirl
+Qualifications:
+Students should be interested in imaging research. Previous programming experience is required, although proficiency in a specific language or framework is not mandatory. A basic understanding of cardiovascular anatomy will be helpful but is not necessary.
+Credit Hours:
+0
+Weekly Hours:
+5 (estimated) 
+
+
+Project:
+Generative AI in Healthcare Supply Chain Management
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Machine Learning, LLMs, Data Science, Operations Research Project Description
+Description:
+Are you fascinated by the potential of artificial intelligence (AI) to change healthcare supply chain operations and improve patient outcomes? Do you have a passion for cutting-edge research and innovation? We are seeking enthusiastic and motivated undergraduate research assistants to join our dynamic team in an exciting project that leverages Generative AI, Reinforcement Learning, and Language Models (LLM) to create advanced simulations and conversational AI to improve the efficiency and transparency in medical supply chain management. We are aiming to hire undergrad research assistant, who will be a key contributor to a project focused on developing AI-driven simulations and conversational chatbot to enhance human-AI interaction in the healthcare and medical supply management. The project involves using Generative AI techniques to create virtual agents that mimic real-world interactions among suppliers and hospitals, healthcare scenarios, and patient treatment needs.
+Supervisor:
+Pengyi Shi
+Mentor:
+Pengyi Shi
+Type of work required:
+• Collaborate with our interdisciplinary team to design and develop backend engine and frontend interface using Generative AI and LLM.
+• Implement AI algorithms and models to simulate supply chain ordering behaviors, transportation and ordering decisions, and the impact of under- or over-stock of medical supplies on system performance and individual patient outcomes.
+• Fine-tune and optimize LLMs based on real-world data and expert input; provide interpretable decision support.
+• Collaborate on writing and refining code, documentation, and research papers.
+• Contribute creative ideas to improve the accuracy and realism of the simulations.
+Websites:
+https://web.ics.purdue.edu/~shi178/
+Qualifications:
+• GPA 3.85 and above. • Enrolled as an undergraduate student in Computer Science, Engineering, Data Science, or a related field. • Strong programming skills, particularly in Python. • Interest in artificial intelligence, machine learning, and LLM. • Excellent communication skills and ability to work in a collaborative team environment. • Attention to detail and strong problem-solving skills. • Familiarity with agent-based modeling or AI techniques is a plus but not required.
+Credit Hours:
+1
+Weekly Hours:
+10 (estimated) 
+
+
+
+Project:
+ISF: Acoustic bioaerosol removal in HVAC systems
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+HVAC, Acoustics, Fluid mechanics, and aerosol transport.
+Description:
+Particulate Matter (PM) 2.5 and various gaseous pollutants in the surrounding air pose a significant threat to humanity. The quality of indoor air depends on the air quality of outdoor sources, and given the increased amount of time spent indoors by humans, research on air quality needs more focus than ever. Current state-of-the-art filtration technologies have severe limitations in capturing specific particle sizes called the most penetrating particle sizes (MPPS). This project explores a novel air purification technology that uses acoustic waves to enhance the capture efficiency of fiber filters. We investigate the potential of acoustic interaction and streaming forces to manipulate the movement of aerosols within a flowing stream to direct them toward the filter fibers. These systems require high-efficiency filters to remove MPPS, which further causes a high-pressure drop in the system.In this work, we try to harness the potential of acoustic radiation and streaming forces to improve the capture efficiency of the fiber filters. Our numerical simulations showed an increase of up to 12x -123x for different configurations of fiber filters. Currently, we are constructing a bench-scale experimental setup to demonstrate the complex interaction between the acoustic waves, fiber filters, and particles. This setup focuses on generating aerosols that mimic real-world particle size distributions. The particle-laden air stream enters a bench-scale duct where the acoustic filtration device is mounted. Finally, the number concentration of particles upstream and downstream of the acoustic filtration device is measured to evaluate the capture efficiency of the system.
+Supervisor:
+David E M Warsinger
+Mentor:
+David E M Warsinger
+Type of work required:
+Building apparatuses, running experiments, analyzing data, creating publication graphics, writing, graphic design, journal publications and patents
+Websites:
+https://www.warsinger.com/
+Qualifications:
+The student who joins this lab will be expected to attend weekly lab meetings and sub-group meetings. This project seeks students who possess fluid mechanics knowledge and a preliminary understanding of aerosol transport and acoustics. The student's primary involvement will be in designing experiments to investigate aerosols' behavior in internal flows when subjected to acoustic forces. In addition to the required skills mentioned above, applicants with additional experience with some of the following programs are preferred: Python, Adobe Illustrator and Arduino. The student will be expected to give weekly progress updates and will have the opportunity to present some of their updates at quarterly meetings with industry members in Purdue’s Center for High Performance Buildings. The student should also be eager to collaborate with other researchers outside of mechanical engineering to draw from a broad range of expertise in pursuing our research goals.
+Credit Hours:
+3
+Weekly Hours:
+12 (estimated) 
+
+
+Project:
+ISF: Promoting Plastic Recycling Awareness and Engagement through Student-Led Educational Initiatives
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Global Sustainability
+Description:
+The current state of plastic recycling globally presents significant challenges, making public awareness more necessary than ever. To address this, we propose working with a DUIRI student to lay the groundwork by investigating the current state of plastic recycling in the Midwest U.S., as well as ongoing events, programs, or movements focused on raising awareness and promoting plastic recycling, while also examining global examples of successful recycling initiatives. The outcomes of this study will be shared with Purdue students to raise awareness of plastic waste and promote understanding of the recycling and upcycling of end-of-life plastics.
+Supervisor:
+Garam Kim
+Mentor:
+Do Gyun Kim
+Type of work required:
+Students will work closely with supervisors to investigate strategies for promoting plastic recycling at Purdue University. This will include designing the event and demonstrations to showcase the recycling process, developing educational materials, and facilitating hands-on activities where participants can engage in creating products from recycled plastics.
+Websites:
+Raisbeck Advanced Composite Laboratory (RACL): https://polytechnic.purdue.edu/facilities/raisbeck-advanced-composite-laboratory
+Composites Manufacturing and Simulation Center (CMSC): https://www.purdue.edu/cmsc/
+Qualifications:
+Students who are highly motivated in plastic sustainability and recycling.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated) 
+
+
+Project:
+Assessing Impact of Online Activists and Vigilantes on Public Perceptions of Cyber Crime
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Global Security
+Description:
+This project explores how online activists and vigilantes influence public perceptions of cyber crime through the examination of social media interactions. By analyzing responses to vigilante accounts and incidents, the study aims to understand the broader societal impact these individuals have on shaping awareness, attitudes, and understanding of cyber crime. The project also seeks to uncover how vigilante actions affect trust in formal law enforcement and public discourse surrounding cyber crime prevention and justice.
+Supervisor:
+Tatiana Renae Ringenberg
+Mentor:
+Tatiana Renae Ringenberg
+Type of work required:
+Students on this project will conduct qualitative analysis of online social media content from Reddit, Twitch, and other media sources. Students will also be involved in the development of follow-on surveys.
+Qualifications:
+Prior experience in qualitative analysis is preferred but is not required.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated) 
+
+
+Project:
+ISF: Catalytic water treatment processes
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Membrane science, environmental engineering, mechanical engineering, chemistry, species transport, materials science
+Description:
+Water pollution is a significant concern in many countries and requires innovative technologies to tackle them. Many pollutants hazardous to human health, including pesticides, fluoropolymers, and pathogens, can be broken down into their constituent minerals through photocatalysis. However, existing membranes need substantially improved UV light utilization and penetration for real-world use. We are working on consistently-sized nanostructures near the wavelengths of UV light to control light and enhance the performance of novel photocatalytic membranes. Furthermore, our group works on separation technologies to remove Per- and polyfluoroalkyl substances (PFAS). The team is pursuing multiple projects to explore batch reverse osmosis, nanofabricated membranes, light-driven reactions, artificial intelligence control algorithms, and thermodynamic optimization of energy systems.
+Supervisor;
+David E M Warsinger
+Mentor:
+David E M Warsinger
+Type of work required:
+The student who joins this lab will be expected to attend weekly lab meetings and sub-group meetings. This project seeks students who possess chemistry knowledge and a preliminary understanding of membrane sciences. The student's primary involvement will be in fabricating new membranes, characterization , and design experiments for testing the technologies. In addition to the required skills mentioned above, applicants with additional experience with some of the following programs are preferred: Python, Adobe Illustrator and CAD tools. The student will be expected to give weekly progress updates . The student should also be eager to collaborate with other researchers outside of mechanical engineering to draw from a broad range of expertise in pursuing our research goals.
+Websites;
+https://www.warsinger.com/
+Qualifications:
+- Some background in prototype development/manufacturing will be useful. - Hands on experience in conducting experiments in the lab - Experience with python/MATLAB will be useful for assisting inside projects related to the technology we are developing. - Students should have a strong interest in experimental research, motivation to pursue research problems related to air purification to tackle future pandemics.
+Credit Hours:
+3
+Weekly Hours:
+12 (estimated) 
+
+
+
+Project:
+ISF: Pulse Flow Reverse Osmosis System for home scale use
+Program:
+DUIRI - Discovery Undergraduate Interdisciplinary Research Internship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Water quality, water security
+Description:
+Reverse osmosis is the most efficient method of purifying and recycling contaminated water. However, reverse osmosis is a process that requires high pressure systems, and somewhat involved flushing cycles of the membranes used to separate clean water from brackish water. There is a need for a streamlined process for the filtration of water, so the process is more continuous and efficient. This project is focused on the design, prototyping and testing of a Pulse Flow Reverse Osmosis test bench for the application of recirculating water in a home style prototype. The system will be tested by examining a variety of properties such as water pressure, temperature, flow, water chemistry. The goals of this project are centered around studying the feasibility of implementation of a novel and efficient reverse osmosis system for water purification and recycling to be used in indoor home and portable systems.
+Supervisor:
+Jose M Garcia Bravo
+Mentor:
+Ali Naderi Beni
+Type of work required:
+The student who joins this lab will be expected to attend weekly lab meetings and sub-group meetings. They will be focusing on prototype development and evaluation. Contributions will include 3D CAD modeling, system control and data acquisition design, membrane material fabrication and testing, and ample opportunities to assist with technical writing efforts (journal articles, conference papers, grant submissions, and patent application). Once the prototype device is developed and optimized, the student will be able to assist with experiments and will be taught to run some of the experiments on their own as well.
+Qualifications:
+- Experience with CAD modeling (CATIA, SOLIDWORKS, etc.) is necessary - Experience with LabVIEW control and data acquisition is beneficial. Course-related experience is also very helpful. - Some background in prototype development/manufacturing will be preferred - Experience with MATLAB and Engineering Equation Solver will be useful for assisting in modeling and troubleshooting. - Student should have a strong interest in fluid mechanics along with a general motivation to pursue research problems related to energy and sustainability - Familiarity with fluid power systems is not required, but would highly desired.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated) 
