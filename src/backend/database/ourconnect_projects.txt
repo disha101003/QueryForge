@@ -1,0 +1,274 @@
+
+Project:
+Leveraging Networks: Nonbinary STEM graduate students and the power of identity-specific social capital
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Closed
+Research Area:
+Engineering Education
+Description:
+This project aims to describe the relationships of nonbinary STEM graduate students and how those relationships (in their workplace, in queer in person and online organizations) support their wellbeing and persistence in their STEM field. We will analyze and disseminate nonbinary engineering graduate student interviews regarding their mentoring relationships to answer the question: How do nonbinary STEM students access support from cisgender allies and their queer, transgender, and nonbinary peers?
+Supervisor:
+Kerrie A Douglas
+Mentor
+Coleman Blaine Thompson
+Type of work required:
+The student researcher has an opportunity to support the STEM nonbinary community through research around nonbinary mentoring relationships. The student researcher will work with two nonbinary PhD students in engineering education to analyze interviews and write up findings for an engineering education conference or journal paper. Through their work, the student researchers will develop their professional skills, such as qualitative methods and research communication, and develop their identity as a queer engineer.
+Qualifications:
+While this project is based in the School of Engineering Education, this project welcomes queer/trans/nonbinary students interested in research on nonbinary student mentoring relationships across the college of engineering, regardless of their engineering discipline. We particularly value organizational and communication skills, and a desire to be a part of a team and collaborative process.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated) 
+
+
+
+Project:
+SCALE SoC: SoC design, verification, programming, and test
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Closed
+Research Area:
+System on Chip Design, Integrated Circuit Testing, Embedded Systems
+Description:
+System on Chip Extension Technologies (SoCET) is a long running chip design team intended primarily for undergraduates to get experience in as many aspects of chip design, fabrication, and test as possible. The team is organized like a small chip design company with sub-teams for logic design, verification, chip-layout, analog design, printed circuit board (PCB) design, test, software, and special research projects in collaboration with research groups in ECE. Special projects include applications in hardware security and GPU design. Based on your interests and background, team leaders will work with you to assign you to an appropriate sub-team or special project. Because of the wide range of projects, the experience and skill requirements for SoCET are flexible. Almost any kind of background in circuit design, logic design, circuit simulation, computer architecture, and microcontroller programming will be useful in some part of the team. For more details on possible projects and sub-teams, see https://engineering.purdue.edu/SoC-Team.
+Supervisor:
+Tanya A Faltens
+Mentor
+Mark C Johnson
+Type of work required:
+The expected contributions will depend on the area of the SoCET to which you are assigned. Depending on your background, part of the work will involve learning skills necessary to the assignment project. Possible contributions include creation of subsystems to be used in a future chip design, creation of circuit layouts for an IC design, writing software to be used on an existing System on Chip design, FPGA prototyping, design of printed circuit boards, for IC testing, or participation in research collaborations with other faculty. See https://engineering.purdue.edu/SoC-Team for more examples.
+Websites:
+https://nanohub.org/groups/scale/research_opportunities/research_purdue/ftr2025
+https://engineering.purdue.edu/SoC-Team
+Qualifications:
+Must be a SCALE student. Read more about SCALE and access the SCALE application link here: https://nanohub.org/groups/scale/learn_more. Once in SCALE, apply via the FTR portal: https://engineering.purdue.edu/Engr/Research/EURO/programs/ftr. Preferred Majors: Selected participants will usually be taken from electrical engineering, computer engineering, or computer science, but other majors will be considered if one has skills or experience directly relevant to chip design and testing. Required Experience and Skills: None except strong motivation and problem-solving ability. Desired experience: Desired skills and experience include digital design and simulation using Verilog, analog circuit design, printed circuit board design, computer processor design, IC testing, and microcontroller programming.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated) 
+
+
+Project:
+Deep Learning Driven Segmentation of High-Frequency Four-Dimensional Cardiac Ultrasound Data
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Closed
+Research Area:
+Artificial Intelligence
+Description:
+Automatic boundary detection of 4D ultrasound (4DUS) cardiac data is a promising yet challenging application at the intersection of machine learning and medicine. Using recently developed murine 4DUS cardiac imaging data, in this project, we will employ advanced deep learning models to predict left ventricular wall kinematics along both the endo- and epi-cardial boundaries. We plan to explore metrics of cardiac kinematics by comparing between ground-truth contours and predicted boundaries. We expect the use of such deep learning models could be very helpful for rapid and reliable assessments of murine cardiac function.
+Supervisor
+Guang Lin
+Mentor:
+Marco Aurelio Conde Oliveira Prado
+Type of work required:
+The undergraduates will help to try different deep learning models to predict left ventricular wall kinematics along both the endo- and epi-cardial boundaries. And compare the results between ground-truth contours and predicted boundaries to access the accuracy of different deep learning models.
+Qualifications:
+The candidate should be familar with Python programming and some basic knowledge on machine learning.
+Credit Hours:
+3
+Weekly Hours:
+20 (estimated)
+
+
+Project:
+SCALE RH: Advancing X-ray Spectroscopy and Radiation Shielding Solutions
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Closed
+Research Area:
+Microelectronics, Radiation Hardening
+Description:
+Dr. Aaron Specht's research focuses on developing innovative technologies for elemental measurements. Most work in his lab focuses on spectroscopy for environmental measurements – such as through x-ray fluorescence. This cutting-edge technology is intended to improve the assessment of metal exposure and toxicity in both occupational and environmental health contexts with the ultimate goal to improve health through community or public health efforts. Dr. Specht's interdisciplinary research spans exposure assessment, epidemiology, and physics. His projects focus on instrumentation development and optimization for application in broader health studies with a focus on the kinetics, storage, and transport of toxicants in the body for accurate implementation of novel instruments in health studies. He has projects spanning nuclear engineering, working with doctors in a clinic, or measuring live animals in the countryside. An aspect of radiation and electronics centers in his work involves identifying how electric fields interact with x-ray and gamma shielding design. Utilizing these fields for potential in radiation dose reduction or enhancement in the presence of varying electric fields, which has broad applications in radiation hardening of electronics.
+Supervisor:
+Tanya A Faltens
+Mentor:
+Aaron James Specht
+Type of work required:
+The student will aid in experiment design, data collection, and analysis including: gamma spectroscopy and fitting procedures; basic statistical testing; data cleaning and presentation; experiment design.
+Websites:
+https://nanohub.org/groups/scale/research_opportunities/research_purdue/ftr2025
+https://hhs.purdue.edu/directory/aaron-specht/
+Qualifications:
+Must be a SCALE student. Read more about SCALE and access the SCALE application link here: https://nanohub.org/groups/scale/learn_more. Once in SCALE, apply via the FTR portal: https://engineering.purdue.edu/Engr/Research/EURO/programs/ftr. GPA >3.0 Preferred majors NUCL, ECE, ME, MSE, PHYS, RHS. All Engineering majors can apply. Academic Years Eligible Sophomore-Senior Required Experience and Skills: N/A Desired experience and skills: N/A
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated) 
+
+Project:
+Enhancing VTOL Aircraft Mobility through Innovative Morphing Design and Control
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Closed
+Research Area:
+Autonomy and Control, Robotics
+Description:
+Vertical Take-Off and Landing (VTOL) aircraft represent a significant advancement in aerospace technology, offering unique capabilities in urban air mobility, emergency response, and military operations. The primary objective of this undergraduate research project is to explore the potential of morphing mechanisms in VTOL aircraft to enhance their mobility, adaptability, and operational efficiency. The research objectives include the following aspects. (1) Aircraft Design: Develop innovative morphing designs that allow VTOL aircraft to adjust their aerodynamic profiles in real-time. This involves exploring various morphing technologies such as variable-sweep wings, adaptive fuselages, and flexible control surfaces. (2) Control Systems Development: Design and simulate advanced control systems that manage the morphing mechanisms efficiently. This includes integrating sensors and actuators that adjust the aircraft's shape in response to flight conditions and mission requirements. (3) Simulation and Modeling: Utilize advanced simulation tools to model the aerodynamics, structural dynamics, and control systems of morphing VTOL aircraft. (4) Prototype Testing: Construct prototypes to validate the designs and control strategies. This phase will involve both virtual and small-scale physical testing to assess the functionality and performance improvements provided by the morphing mechanisms.
+Supervisor:
+Ran Dai
+Mentor:
+Type of work required:
+Expected outcomes include:
+(1) Innovative morphing designs tailored for VTOL aircraft that enhance maneuverability and adaptability.
+(2) Advanced control algorithms capable of managing complex morphing mechanisms in diverse operational environments.
+(3) Comprehensive simulation models that predict the performance of morphing VTOL aircraft accurately.
+(4) Proof-of-concept prototypes demonstrating the feasibility and benefits of the proposed morphing technologies.
+Qualifications:
+Applicants are expected to have a GPA above 3.5 and relevant experience with aircraft design and prototyping is required. Applicants are expected to indicate relevant experience in the application.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated)
+
+
+Project:
+Assessing the Impact of an NSF-Funded Sustainability-Focused Research Experience for Undergraduates (REU)
+Program:
+John Martinson Honors College Research Programs
+Term:
+Fall 2024
+Status:
+Closed
+Research Area:
+engineering, entrepreneurship, renewable energy, sustainability
+Description:
+Sustainability refers to the ability to maintain or endure a system or process over the long term without depleting its resources or causing harm to the environment, society, or economy. Sustainability and entrepreneurship are interconnected concepts that both aim to create positive change and value in society, via innovation, problem-solving, long-term thinking, risk-taking, adaptability, collaboration, and value creation. This research project will analyze data and disseminate findings resulting from undergraduate student participation in an NSF REU Site program (Growing Entrepreneurially-Minded Undergraduate Researchers with New Product Development in Applied Energy). This REU Site is unique in that it focuses on sustainability topics of renewable energy, engineering, and entrepreneurship. Learn more here: https://www.PurdueREU.com/.
+Supervisor:
+Lisa B Bosman
+Mentor:
+Lisa B Bosman
+Type of work required:
+Student intern(s) will be expected to analyze data, conduct a mini lit review, create a poster, and present the poster at the Purdue Undergraduate Research Symposium.
+Websites:
+https://www.PurdueREU.com/
+Qualifications:
+No prior research experience required. Student intern(s) should be available to meet weekly. Student intern(s) should plan to dedicate about 5-10 hours per week working independently on the project. Accountability and time management skills are really important.
+Credit Hours:
+0
+Weekly Hours:
+5 (estimated) 
+
+
+Project:
+Design and Manufacturing of Real-Time Controllable Adaptive NC Machine Platform
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Closed
+Research Area:
+Advanced manufacturing
+Description:
+This project focuses on the preliminary design and development of a versatile NC (numerical control) gantry system that serves as a multi-purpose machine platform. The team will design, manufacture, and program both hardware and software, enabling full control and adaptability for research applications. By creating a customizable platform, the project aims to establish a flexible system capable of supporting various add-on system of the machine and the experimental setups. The system will integrate real-time control capabilities to allow dynamic adjustments during operation, laying the foundation for advanced manufacturing and research-driven innovations.
+Supervisor:
+Garam Kim
+Mentor:
+Eduardo Barocio Vaca
+Type of work required:
+Students will collaborate to design and build the NC gantry hardware, including frame construction, motion systems, and integration of actuators and sensors. Concurrently, they will develop the control software to enable real-time adjustments and adapt the system for diverse applications. This work involves hardware prototyping, software programming, and testing the system under simulated and real machining conditions. Students will refine the platform based on experimental results, ensuring robust operation and scalability. Deliverables include a functional NC platform and a report on its design, implementation, and potential research applications.
+Websites:
+https://www.purdue.edu/cmsc/
+https://polytechnic.purdue.edu/facilities/raisbeck-advanced-composite-laboratory
+Qualifications:
+A student with experience in mechanical design, mechatronics, or control systems is preferred. Familiarity with CAD software, numerical control systems, programming (e.g., Python, C++), and sensor integration is highly desirable. Hands-on skills in prototyping and system assembly, as well as a keen interest in adaptive machining and research-driven design, will be advantageous.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated)
+
+
+Project:
+Engineering Materials for Thermal Transport for Semiconductor Packaging
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Thermal Transport, Semiconductors, Materials, Heterogeneous Integration, Advanced Packaging
+Description:
+Does your phone or laptop ever get too hot to touch? Within electronic devices, heat generated by the components doing calculations must be dissipated to through the electronics package to the environment to prevent failure and to protect the users. This project focuses on engineering materials with either high thermal conductivity to effectively dissipate the heat or extremely low thermal conductivity to isolate and protect delicate components in the system (or combinations of material properties that enable routing of heat within the system). A combination of experimental property measurements, microstructural analysis, and performance tests will help identify routes to achieve better performance. Students are not required to have prior heat transfer or materials experience to apply for and excel at this research project! Option to receive course credit.
+Supervisor:
+Amy M Marconnet
+Type of work required:
+Students in this project will fabricate new materials, measure their thermal properties, analyze their microstructures, integrate them into electronic packages, and/or test their thermal performance. Note that multiple students may contribute to the project in collaboration with graduate student mentoring.
+Websites:
+https://engineering.purdue.edu/MTEC
+Qualifications:
+It is beneficial, but not required, for students to have taken thermodynamics, fluid dynamics, and/or heat transfer courses. Programming and experimental skills are a plus.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated)
+
+
+Project:
+Thermal Fatigue of Adhesive Bonding in Modular Additively Manufactured Fiber-Reinforced Composite Tooling
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Manufacturing, advaced materials
+Description:
+This project investigates the impact of thermal cycling on adhesive joints in additively manufactured fiber-reinforced composite tooling. Large composite tools are often joined in sections using adhesives, but repeated exposure to high temperatures during curing can weaken these joints, compromising tool integrity and vacuum performance. By simulating these thermal cycles and analyzing joint performance, the study aims to understand how adhesive durability can be improved for enhanced reliability in composite tooling applications.
+Supervisor:
+Garam Kim
+Mentor:
+Eduardo Barocio Vaca
+Type of work required
+Students will prepare additively manufactured composite test specimens and characterize their coefficient of thermal expansion (CTE). They will apply adhesive joints for the double cantilever beam (DCB) fracture test and conduct vacuum integrity tests to evaluate adhesive performance across multiple thermal cycles. Additionally, students will perform finite element modeling to predict thermal stress in the adhesive layer.
+Websites:
+https://www.purdue.edu/cmsc/
+https://polytechnic.purdue.edu/facilities/raisbeck-advanced-composite-laboratory
+Qualifications:
+The student who has hands-on experience fabricating test specimens using equipment such as waterjet and CNC machines and conducting material characterization tests with a universal testing system is preferred. Proficiency in data analysis and familiarity with finite element analysis (FEA) tools, particularly Abaqus, is also preferred.
+Credit Hours:
+0
+Weekly Hours:
+10 (estimated) 
+
+
+Project:
+High throughput testing for ductility and hydrogen embrittlement
+Program:
+Engineering First Time Researcher (FTR) Fellowship
+Term:
+Spring 2025
+Status:
+Accepted
+Research Area:
+Materials
+Description:
+Rapid testing methods to assess materials properties are critically needed to help in materials design for reliability. With 1000's of potential alloy systems, assessing properties like toughness in the presence of hydrogen or during corrosion is the rate limiting step in making better material choices. The students on this project will work on developing indentation based testing to create fracture geometries in moderately ductile metals. Indentation testing is particularly well suited to integrating into environmental cells (high temperature, during corrosion, in hydrogen charging situations). We will create new tip geometries to create local tensile zones in a rapid test methodology.
+Supervisor:
+David F Bahr
+Type of work required:
+Students will be expected to work on design aspects of the tip geometry, assess stress fields around tips using basic finite element modeling, and perform experiments using macroscopic indentation systems prior to transferring the test geometries to micro and nanoscale systems. Material characterization and testing will be skills gained by the students. Project could be for credit or for pay.
+Qualifications:
+Exposure to stress-strain relationships in materials. Basic CAD and FEM skills a plus but not needed. Experience in metallographic sample preparation a plus but not needed. Can be partly remote, but must have some time in the lab in West Lafayette, so it could be possible for a student based in Indianapolis.
+Credit Hours:
+2
+Weekly Hours:
+6 (estimated) 
