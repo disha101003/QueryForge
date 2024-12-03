@@ -15,7 +15,15 @@ body {
     box-sizing: border-box;
     color: #ffffff;
 }
-
+  /* Styles for results and tab content */
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    text-align: left;
+}
 .sidebar a {
     display: block;
     text-decoration: none;

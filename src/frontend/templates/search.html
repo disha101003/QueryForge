@@ -6,13 +6,28 @@
     <title>Discover Research Opportunities at Purdue University</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_search.css') }}">
     <style>
-        /* Add your styles here */
+        /* Styles for results and tab content */
         .result {
             margin-top: 20px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             background: #f9f9f9;
+            text-align: left;
+        }
+        #dynamicTitle {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0056b3; /* Example active color */
+            text-decoration: underline;
+        }
+        #tabContent {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -20,6 +35,8 @@
     <div class="sidebar">
         <a href="{{ url_for('login') }}">Login</a>
         <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('resume_parser') }}">Resume Parser</a>
+
         <a href="#" onclick="toggleTab('Professor')">Professor</a>
         <a href="#" onclick="toggleTab('VIP/EPICS')">VIP/EPICS</a>
         <a href="#" onclick="toggleTab('DURI')">DURI</a>
@@ -27,32 +44,56 @@
     </div>
     <div class="main-content">
         <h1>Discover Research Opportunities at Purdue University</h1>
-        <div id="dynamicTitle" style="display: none;"></div>
+        <div id="dynamicTitle"></div>
         <div class="search-container">
             <form method="POST" action="{{ url_for('search') }}">
-                <input type="text" name="query" placeholder="Search..." id="searchBox">
-                <button type="submit">Q</button>
+                <input type="hidden" name="active_tab" id="activeTabInput">
+
+                <input type="text" name="query" placeholder="Search..." id="searchBox" data-tab="">
+                <button type="submit">Search</button>
             </form>
         </div>
+        <div id="tabContent"></div>
         
         {% if search_result %}
-            <div class="result">
-                <p>{{ search_result }}</p>
-            </div>
-        {% endif %}
+        <div class="result">
+            <h3>Search Results:</h3>
+            <ul>
+                {% for result in search_result.split('\n') %}
+                    <li>{{ result[2:] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
     </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
     <script>
+        // Mapping tabs to their corresponding functions
+        const tabFunctionMapping = {
+            "Professor": professorFunction,
+            "VIP/EPICS": vipEpicsFunction,
+            "DURI": duriFunction,
+            "Other Research Opportunities": otherResearchOpportunitiesFunction
+        };
         let highlightedTab = null; // Track the currently highlighted tab
 
         function toggleTab(tab) {
             const titleDiv = document.getElementById('dynamicTitle');
+            const contentDiv = document.getElementById('tabContent');
+            const searchBox = document.getElementById('searchBox');
+            activeTabInput.value = tab; // Update hidden input field with active tab
 
             // Check if the clicked tab is the highlighted one
             if (highlightedTab === tab) {
                 // Deselect the tab
                 highlightedTab = null;
                 titleDiv.style.display = 'none'; // Hide the title
+                contentDiv.innerHTML = ''; // Clear the content
+                searchBox.setAttribute('data-tab', ''); // Clear active tab
+                activeTabInput.value = ''; // Clear hidden input field
+
                 return;
             }
 
@@ -60,6 +101,7 @@
             highlightedTab = tab;
             titleDiv.innerText = tab; // Set title text
             titleDiv.style.display = 'block'; // Show the title
+            searchBox.setAttribute('data-tab', tab); // Update active tab
 
             // Optionally, you can also highlight the tab visually
             const tabs = document.querySelectorAll('.sidebar a');
@@ -69,6 +111,38 @@
                     t.classList.add('highlight');
                 }
             });
+
+            // Call the respective function for the selected tab
+            if (tabFunctionMapping[tab]) {
+                tabFunctionMapping[tab](); // Call the function from the mapping
+            } else {
+                console.error(`No function mapped for tab: ${tab}`);
+            }
+        }
+
+        // Functions for each tab
+        function professorFunction() {
+            console.log("Professor tab selected.");
+            const contentDiv = document.getElementById('tabContent');
+            contentDiv.innerHTML = `<p>Welcome to the Professor Research Opportunities page. Here you can find detailed information about research programs led by Purdue professors.</p>`;
+        }
+
+        function vipEpicsFunction() {
+            console.log("VIP/EPICS tab selected.");
+            const contentDiv = document.getElementById('tabContent');
+            contentDiv.innerHTML = `<p>Explore exciting VIP and EPICS research opportunities at Purdue University, integrating learning with real-world problem-solving!</p>`;
+        }
+
+        function duriFunction() {
+            console.log("DURI tab selected.");
+            const contentDiv = document.getElementById('tabContent');
+            contentDiv.innerHTML = `<p>DURI (Discovery Undergraduate Research Internships) provides a platform for students to collaborate on cutting-edge research projects.</p>`;
+        }
+
+        function otherResearchOpportunitiesFunction() {
+            console.log("Other Research Opportunities tab selected.");
+            const contentDiv = document.getElementById('tabContent');
+            contentDiv.innerHTML = `<p>Find other exciting research opportunities that suit your interests and career goals.</p>`;
         }
     </script>
 </body>
