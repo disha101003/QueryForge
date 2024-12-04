@@ -17,11 +17,6 @@ body {
     cursor: pointer;
 }
 
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-    text-align: center;
-}
 
 .search-container {
     margin-top: 20px;
@@ -84,34 +79,6 @@ body {
     padding: 20px;
     text-align: center;
     color: #090909; /* White text color for main content */
-}
-
-.search-container {
-    margin-top: 20px;
-    position: relative;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.search-container input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-container button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border: none;
-    background: #ccc;
-    width: 50px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
 .search-container button:hover {

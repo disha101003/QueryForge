@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Parser</title>
     <link rel="stylesheet" href="frontend/static/css/style_resume.css">
-    > 
 </head>
 <body>
     <div class="sidebar">
         <h2>Navigation</h2>
-        <a href="/signup">Signup</a>
+        <a href="/index">Home</a>
         <a href="/login">Login</a>
         <a href="/search">Search</a>
-        <a href="/resume-parser">Resume Parser</a>
     </div>
     <div class="main-content">
         <h1>Resume Parser</h1>
         <div class="upload-container">
+            <!-- File upload form -->
             <form action="/resume-parser" method="POST" enctype="multipart/form-data">
                 <input type="file" name="resume" accept=".pdf,.docx" required>
                 <button type="submit">Upload</button>
             </form>
         </div>
-        
+
         {% if keywords %}
         <div id="keywords-container" class="keywords-container">
             <h2>Extracted Keywords</h2>
@@ -35,11 +34,27 @@
                         <li>{{ keyword }}</li>
                     {% endfor %}
                 </ul>
+                <!-- Form to search with top keywords -->
+                <form id="keywordsForm" method="POST">
+                    <input type="hidden" name="top_keywords" id="topKeywordsInput" value="{{ keywords | join(',') }}">
+                    <button type="submit">Search with Top Keywords</button>
+                </form>
             {% endif %}
         </div>
         {% else %}
         <p>Upload a resume to extract keywords.</p>
         {% endif %}
+
+        {% if search_result %}
+        <div class="result">
+            <h3>Search Results:</h3>
+            <ul>
+                {% for result in search_result.split('\n') %}
+                    <li>{{ result[2:] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
     </div>
 </body>
 </html>

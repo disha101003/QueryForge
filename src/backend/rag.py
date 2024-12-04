@@ -8,18 +8,20 @@ import json
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 import os
-directory_path = "database"
+directory_path_ourconnect = "database/ourconnect"
+directory_path_professors = "database/professors"
+directory_path_vip = "database/vip"
+
 model_name = "BAAI/bge-small-en-v1.5"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModel.from_pretrained(model_name)
 chunk_size = 400
 para_seperator=" /n /n"
 separator=" "
-top_k = 5
+top_k = 10
 openai_model = ChatOpenAI(model="gpt-3.5-turbo")
-
     
-chat = ChatOpenAI(temperature=0.5)
+chat = ChatOpenAI(temperature=0.5 )
 #YOUR KEY HERE
 def chunking(directory_path, tokenizer, chunk_size, para_seperator=" /n /n", separator=" "):
 
@@ -167,23 +169,45 @@ def retrieve_text(top_results, document_data):
     related_text = document_data[doc_id][chunk_id]
     return related_text
 
-def generate_llm_response(openai_model, query, relavent_text):
+def generate_llm_response(openai_model, query, relevant_text):
+    # Template with an emphasis on bullet points and extracting details
     template = """
-    You are an intelligent search engine. You will be provided with some retrieved context, as well as the users query.
+    You are an intelligent search engine designed to assist users by extracting key information in an organized manner.
 
-    Your job is to understand the request, and answer based on the retrieved context.
-    Here is context:
+    You will be provided with:
+    1. Some retrieved context.
+    2. A user's query.
 
+    Your task is to:
+    - Parse and extract all relevant information in response to the query.
+    - Present the results in clean, concise points.
+    - Give lots of information, try to cover all the relevant text you get.
+    - Include details such as names, roles, descriptions, contact information, or any other pertinent details, if available.
+    - If multiple relevant entries are found in the context, list each entry with its details.
+
+    Here is the context:
     <context>
     {context}
     </context>
 
     Question: {question}
+    Provide the response below in bullet-point format.
     """
+    # Build the prompt template
     prompt = ChatPromptTemplate.from_template(template=template)
 
+    # Chain the prompt to the model
     chain = prompt | openai_model
-    response=chain.invoke({"context":relavent_text["text"],"question":query})
+
+    # If relevant_text contains multiple entries, combine them
+    if isinstance(relevant_text, list):
+        combined_context = " ".join(item.get("text", "") for item in relevant_text)
+    else:
+        combined_context = relevant_text.get("text", "")
+
+    # Invoke the chain with the query and combined context
+    response = chain.invoke({"context": combined_context, "question": query})
+
     return response
 
 
@@ -196,9 +220,14 @@ def load_json(filepath):
 # Load documents and mapped document embeddings
 document_data = load_json("documents/doc_store_2.json")  # Load document store
 mapped_document_db = load_json("documents/vector_store_2.json")  # Load vector store
-
+document_data_prof=load_json("documents/doc_store_prof.json")
+mapped_document_db_prof = load_json("documents/vector_store_prof.json")  # Load vector store
+document_data_vip=load_json("documents/doc_store_vip.json")
+mapped_document_db_vip = load_json("documents/vector_store_vip.json")  # Load vector store
+document_data_our=load_json("documents/doc_store_ourconnect.json")
+mapped_document_db_our = load_json("documents/vector_store_ourconnect.json")  # Load vector store
 # Function to handle search queries
-def response(query):
+def response(query, document_data=document_data, mapped_document_db=mapped_document_db):
     # Compute embeddings for the query
     query_embeddings = compute_embeddings(query, tokenizer, model)
 
@@ -221,34 +250,45 @@ def response(query):
     print(content)
     return content
 
+def response_prof(query):
+    return response(query, document_data_prof, mapped_document_db_prof)
+    
+def response_our(query):
+    return response(query, document_data_our, mapped_document_db_our)
 
+    
+def response_vip(query):
+    return response(query, document_data_vip, mapped_document_db_vip)
+
+    
 if __name__ == "__main__":
-   
-    #creating document store with chunk id, doc_id, text
-    documents = chunking(directory_path, tokenizer, chunk_size, para_seperator, separator)
+    directory = [directory_path_vip, directory_path_ourconnect, directory_path_vip]
+    for i in directory:
+        #creating document store with chunk id, doc_id, text
+        documents = chunking(i, tokenizer, chunk_size, para_seperator, separator)
 
-    #now embedding generation and mapping in database
-    mapped_document_db = map_document_embeddings(documents, tokenizer, model)
-    
-    #saving json
-    save_json('documents/doc_store_2.json', documents) 
-    save_json('documents/vector_store_2.json', mapped_document_db)    
-    
-    #Retrieving most relavent data chunks
-    query = "Which professors work in reinforcemnt learning?"
-    query_embeddings = compute_embeddings(query, tokenizer, model)
-    sorted_scores = retrieve_top_k_scores(query_embeddings, mapped_document_db, top_k)
-    top_results = retrieve_top_results(sorted_scores)
-    
-    #reading json
-    document_data = read_json("documents/doc_store_2.json") #read document store
+        #now embedding generation and mapping in database
+        mapped_document_db = map_document_embeddings(documents, tokenizer, model)
+        
+        #saving json
+        save_json(f'documents/doc_store_{i[14:]}.json', documents) 
+        save_json(f'documents/vector_store_{i[14:]}.json', mapped_document_db)    
+        
+        #Retrieving most relavent data chunks
+        query = "Which professors work in reinforcemnt learning?"
+        query_embeddings = compute_embeddings(query, tokenizer, model)
+        sorted_scores = retrieve_top_k_scores(query_embeddings, mapped_document_db, top_k)
+        top_results = retrieve_top_results(sorted_scores)
+        
+        #reading json
+        document_data = read_json(f"documents/doc_store_{i[14:]}.json") #read document store
 
-    #Retrieving text of relavent chunk embeddings
-    relavent_text = retrieve_text(top_results, document_data)
+        #Retrieving text of relavent chunk embeddings
+        relavent_text = retrieve_text(top_results, document_data)
 
-    print(relavent_text)
-    #print(relavent_text["text"])
+        print(relavent_text)
+        #print(relavent_text["text"])
 
-#    Uncomment if you have api key 
-    response = generate_llm_response(openai_model, query, relavent_text)
-    print(response)
+    #    Uncomment if you have api key 
+        response = generate_llm_response(openai_model, query, relavent_text)
+        print(response)

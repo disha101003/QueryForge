@@ -110,7 +110,11 @@ This will execute all tests and provide a coverage report.
 ## Commands to run the application locally
 
 To run the application:
-
+You will first have to export your OPENAI_API_KEY
+0. Export OPENAI KEY:
+   ```bash
+   export OPENAI_API_KEY='YOUR_KEY'
+   ```
 1. Navigate to the backend folder:
    ```bash
    cd src/backend
@@ -120,6 +124,13 @@ To run the application:
    ```bash
    python -m app.app
    ```
+To Update Rag database
+1. Navigate to the backend folder anf run rag.py:
+   ```bash
+   cd src/backend
+   python -m rag
+   ```
+
 
 ## Submitting a Pull Request
 
