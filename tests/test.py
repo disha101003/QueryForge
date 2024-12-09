@@ -3,7 +3,9 @@ from unittest.mock import patch, MagicMock
 from bs4 import BeautifulSoup
 import requests
 
-# Testing webscrapping 
+# Testing webscrapping
+
+
 class TestProfessorScraper(unittest.TestCase):
     @patch('requests.get')
     def test_find_next_info(self, mock_get):
@@ -38,13 +40,14 @@ class TestProfessorScraper(unittest.TestCase):
             office = office_element.find_next(string=True).strip()
             self.assertEqual(office, "Room 123")
 
-        
-
         # Test research description extraction
         research_heading = soup.find('h2', string='Research')
         if research_heading:
-            research_description = research_heading.find_next('p').get_text(strip=True)
-            self.assertEqual(research_description, "Dr. Doe's research focuses on AI and machine learning.")
+            research_description = research_heading.find_next(
+                'p').get_text(strip=True)
+            self.assertEqual(
+                research_description,
+                "Dr. Doe's research focuses on AI and machine learning.")
 
     @patch('requests.get')
     def test_missing_labels(self, mock_get):
@@ -66,16 +69,14 @@ class TestProfessorScraper(unittest.TestCase):
         response = requests.get("https://example.com")
         soup = BeautifulSoup(response.content, 'html.parser')
 
-      
-
         # Test missing research description
         research_heading = soup.find('h2', string='Research')
         if research_heading:
-            research_description = research_heading.find_next('p').get_text(strip=True)
+            research_description = research_heading.find_next(
+                'p').get_text(strip=True)
         else:
             research_description = "N/A"
         self.assertEqual(research_description, "N/A")
-
 
 
 if __name__ == '__main__':
