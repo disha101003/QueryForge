@@ -12,7 +12,10 @@
 <body>
     <h1 class="title">QueryForge</h1>
     <button class="btn" onclick="redirectToLogin()">Start</button>
-
+  <!-- Footer with version number -->
+    <footer class="footer">
+        <p>Version 1.0.0</p>
+    </footer>
     <script>
         function redirectToLogin() {
             window.location.href = "{{ url_for('login') }}";

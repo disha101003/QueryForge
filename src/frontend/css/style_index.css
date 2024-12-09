@@ -6,7 +6,17 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif; /* Changed to a nicer font */
 }
-
+/* Add to your style_index.css */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 20px; /* Adds spacing between the button and footer */
+}
 body {
     display: flex;
     flex-direction: column;
