@@ -1,12 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-from rag import response_prof, response_vip, response_our, response
-import sqlite3
+from rag import response_prof, response_vip, response_our, response, response_duri
 import os
 from werkzeug.utils import secure_filename
 import docx
-from PyPDF2 import PdfReader
 from collections import Counter
 import re
 
@@ -81,11 +79,12 @@ def extract_keywords(text):
     
     return dict(Counter(found_keywords))
 
+# Home Page Route
 @app.route('/')
 def index():
     return render_template('index.html')  # Render the index.html template
 
-
+# Sign Up Route
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
@@ -110,6 +109,7 @@ def signup():
 
     return render_template('signup.html')
 
+# Login Page Route
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -126,6 +126,7 @@ def login():
 
     return render_template('login.html')
 
+# Search Page Route
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     if 'user_id' not in session:
@@ -136,16 +137,18 @@ def search():
     if request.method == 'POST':
         query = request.form.get('query')  # The user's search query
         active_tab = request.form.get('active_tab')  # Get the active tab from the form
-
+      
         # Determine which function to call based on the active tab
         if active_tab == 'Professor':
-            search_result = response_prof(query)
+                search_result = response_prof(query)
         elif active_tab == 'VIP/EPICS':
-            search_result = response_vip(query)
+                search_result = response_vip(query)
         elif active_tab == 'Other Research Opportunities':
             search_result = response_our(query)
+        elif active_tab == 'DURI':
+                search_result = response_duri(query)
         else:
-            search_result = response(query)
+            search_result = response_prof(query)
 
     # Render the search results with the corresponding active tab
     return render_template('search.html', search_result=search_result)
@@ -153,6 +156,8 @@ def search():
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+# Resume-Parser Route
 @app.route('/resume-parser', methods=['GET', 'POST'])
 def resume_parser():
     search_result = None  # Initialize the search result as None
@@ -176,13 +181,10 @@ def resume_parser():
 
                 # Extract keywords from the text
                 keywords = extract_keywords(text)
-                print(keywords)  # You can remove this print statement in production
-                flash(f'Keywords extracted: {keywords}', 'success')
 
         # Handle top keywords search
         top_keywords = request.form.get('top_keywords')  # Get top keywords from form
-        print("keywords are ")
-        print(top_keywords)
+     
 
         if top_keywords:
             top_keywords_list = top_keywords.split(',')  # Convert string to list

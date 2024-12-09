@@ -8,21 +8,28 @@ import json
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 import os
-directory_path_ourconnect = "database/ourconnect"
-directory_path_professors = "database/professors"
-directory_path_vip = "database/vip"
+from config.config import config, OPENAI_API_KEY
+# Load database paths from config
+directory_path_ourconnect = config["database_paths"]["ourconnect"]
+directory_path_professors = config["database_paths"]["professors"]
+directory_path_vip = config["database_paths"]["vip"]
+directory_path_duri = config["database_paths"]["duri"]
 
-model_name = "BAAI/bge-small-en-v1.5"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModel.from_pretrained(model_name)
-chunk_size = 400
-para_seperator=" /n /n"
-separator=" "
-top_k = 10
-openai_model = ChatOpenAI(model="gpt-3.5-turbo")
-    
-chat = ChatOpenAI(temperature=0.5 )
-#YOUR KEY HERE
+# Load model details from config
+model_name = config["model"]["name"]
+tokenizer = config["model"]["tokenizer"]  # Pre-initialized tokenizer
+model = config["model"]["model"]          # Pre-initialized model
+
+# Load processing parameters from config
+chunk_size = config["processing"]["chunk_size"]
+para_seperator = config["processing"]["para_separator"]
+separator = config["processing"]["separator"]
+top_k = config["processing"]["top_k"]
+# Add your OPENAI_API_KEY here before running 
+openai_model = ChatOpenAI(model="gpt-3.5-turbo", openai_api_key=OPENAI_API_KEY)
+   
+chat = ChatOpenAI(temperature=0.5,openai_api_key=OPENAI_API_KEY )
+
 def chunking(directory_path, tokenizer, chunk_size, para_seperator=" /n /n", separator=" "):
 
     #tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -67,7 +74,7 @@ def chunking(directory_path, tokenizer, chunk_size, para_seperator=" /n /n", sep
         documents[doc_id] = all_chunks
     return documents    
 
-
+# Make Document Embeddings
 def map_document_embeddings(documents, tokenizer, model):
     mapped_document_db = {}
     for id, dict_content in documents.items():
@@ -81,6 +88,7 @@ def map_document_embeddings(documents, tokenizer, model):
         mapped_document_db[id] = mapped_embeddings
     return mapped_document_db
 
+# Retrieve Information by implementing similarity search from queries
 def retrieve_information(query, top_k, mapped_document_db):
     query_inputs = tokenizer(query, return_tensors="pt", padding=True, truncation=True)
     query_embeddings = model(**query_inputs).last_hidden_state.mean(dim=1).squeeze()
@@ -116,13 +124,15 @@ def retrieve_information(query, top_k, mapped_document_db):
         results = (doc_id, chunk_id, score)
         top_results.append(results)
     return top_results    
-   
+
+# Function to compute embeddings
 def compute_embeddings(query, tokenizer, model):
     query_inputs = tokenizer(query, return_tensors="pt", padding=True, truncation=True)
     query_embeddings = model(**query_inputs).last_hidden_state.mean(dim=1).squeeze()
     query_embeddings=query_embeddings.tolist()
     return query_embeddings
 
+# Function to compute Cosine Similarity Search 
 def calculate_cosine_similarity_score(query_embeddings, chunk_embeddings):
         normalized_query = np.linalg.norm(query_embeddings)
         normalized_chunk = np.linalg.norm(chunk_embeddings)
@@ -132,7 +142,7 @@ def calculate_cosine_similarity_score(query_embeddings, chunk_embeddings):
             score = np.dot(chunk_embeddings, query_embeddings)/ (normalized_chunk * normalized_query)  
         return score    
 
-
+# Retrieve Top Matches
 def retrieve_top_k_scores(query_embeddings, mapped_document_db, top_k):
     scores = {}
 
@@ -146,6 +156,7 @@ def retrieve_top_k_scores(query_embeddings, mapped_document_db, top_k):
 
     return sorted_scores        
 
+# Helper function to retrieve Top Matches
 def retrieve_top_results(sorted_scores):
     top_results=[]
     for ((doc_id, chunk_id), score) in sorted_scores:
@@ -153,15 +164,18 @@ def retrieve_top_results(sorted_scores):
         top_results.append(results)
     return top_results    
 
+#Helper function to save file 
 def save_json(path, data):
     with open(path, 'w') as f:
         json.dump(data, f, indent=4)
-
+        
+# Helper function to read json files
 def read_json(path):
     with open(path, 'r') as f:
         data = json.load(f)
     return data
 
+# Helper function to retrieve text from matches
 def retrieve_text(top_results, document_data):
     first_match = top_results[0]
     doc_id = first_match[0]
@@ -169,6 +183,7 @@ def retrieve_text(top_results, document_data):
     related_text = document_data[doc_id][chunk_id]
     return related_text
 
+# Generate LLM response 
 def generate_llm_response(openai_model, query, relevant_text):
     # Template with an emphasis on bullet points and extracting details
     template = """
@@ -211,13 +226,12 @@ def generate_llm_response(openai_model, query, relevant_text):
     return response
 
 
-
 # Function to load JSON data
 def load_json(filepath):
     with open(filepath, 'r') as f:
         return json.load(f)
 
-# Load documents and mapped document embeddings
+# Load documents and mapped document embeddings from vector databases
 document_data = load_json("documents/doc_store_2.json")  # Load document store
 mapped_document_db = load_json("documents/vector_store_2.json")  # Load vector store
 document_data_prof=load_json("documents/doc_store_prof.json")
@@ -226,6 +240,8 @@ document_data_vip=load_json("documents/doc_store_vip.json")
 mapped_document_db_vip = load_json("documents/vector_store_vip.json")  # Load vector store
 document_data_our=load_json("documents/doc_store_ourconnect.json")
 mapped_document_db_our = load_json("documents/vector_store_ourconnect.json")  # Load vector store
+document_data_duri=load_json("documents/doc_store_DURI.json")
+mapped_document_db_duri = load_json("documents/vector_store_DURI.json")  # Load vector store
 # Function to handle search queries
 def response(query, document_data=document_data, mapped_document_db=mapped_document_db):
     # Compute embeddings for the query
@@ -250,19 +266,24 @@ def response(query, document_data=document_data, mapped_document_db=mapped_docum
     print(content)
     return content
 
+# Function for professor database and response 
 def response_prof(query):
     return response(query, document_data_prof, mapped_document_db_prof)
-    
+
+# Function for OUR database and response
 def response_our(query):
     return response(query, document_data_our, mapped_document_db_our)
 
-    
+# Function for VIP datatbase and response 
 def response_vip(query):
     return response(query, document_data_vip, mapped_document_db_vip)
 
-    
+# Function for VIP datatbase and response 
+def response_duri(query):
+    return response(query, document_data_duri, mapped_document_db_duri)
+
 if __name__ == "__main__":
-    directory = [directory_path_vip, directory_path_ourconnect, directory_path_vip]
+    directory = [directory_path_duri]
     for i in directory:
         #creating document store with chunk id, doc_id, text
         documents = chunking(i, tokenizer, chunk_size, para_seperator, separator)
@@ -271,8 +292,8 @@ if __name__ == "__main__":
         mapped_document_db = map_document_embeddings(documents, tokenizer, model)
         
         #saving json
-        save_json(f'documents/doc_store_{i[14:]}.json', documents) 
-        save_json(f'documents/vector_store_{i[14:]}.json', mapped_document_db)    
+        save_json(f'documents/doc_store_{i[11:]}.json', documents) 
+        save_json(f'documents/vector_store_{i[11:]}.json', mapped_document_db)    
         
         #Retrieving most relavent data chunks
         query = "Which professors work in reinforcemnt learning?"
@@ -281,14 +302,14 @@ if __name__ == "__main__":
         top_results = retrieve_top_results(sorted_scores)
         
         #reading json
-        document_data = read_json(f"documents/doc_store_{i[14:]}.json") #read document store
+        # document_data = read_json(f"documents/doc_store_{i[11:]}.json") #read document store
 
-        #Retrieving text of relavent chunk embeddings
-        relavent_text = retrieve_text(top_results, document_data)
+        # #Retrieving text of relavent chunk embeddings
+        # relavent_text = retrieve_text(top_results, document_data)
 
-        print(relavent_text)
+        # print(relavent_text)
         #print(relavent_text["text"])
 
-    #    Uncomment if you have api key 
-        response = generate_llm_response(openai_model, query, relavent_text)
-        print(response)
+        #Uncomment if you have api key 
+        # response = generate_llm_response(openai_model, query, relavent_text)
+        # print(response)

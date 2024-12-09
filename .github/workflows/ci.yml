@@ -32,7 +32,8 @@ jobs:
           
       - name: Run unit tests
         run: |
-          pytest src/tests/unit
+          cd tests
+          python -m test.py
 
       - name: Build executable with PyInstaller using spec file
         run: |

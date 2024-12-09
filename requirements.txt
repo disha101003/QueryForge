@@ -14,3 +14,4 @@ flake8
 farm-haystack[all]
 langchain_core
 langchain_openai
+PyPDF2
