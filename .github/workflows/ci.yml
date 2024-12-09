@@ -33,7 +33,7 @@ jobs:
       - name: Run unit tests
         run: |
           cd tests
-          python -m test.py
+          python test.py
 
       - name: Build executable with PyInstaller using spec file
         run: |
