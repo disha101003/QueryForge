@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         {# <h1>QueryForge</h1> #}
@@ -36,6 +38,7 @@
             {% endif %}
         {% endwith %}
 
+        <!-- Sign Up Form -->
         <form id="signupForm" action="{{ url_for('signup') }}" method="POST">
             <h2 class="title">Sign Up</h2>
             <div class="input-field">
@@ -61,7 +64,7 @@
             const strength = getPasswordStrength(passwordInput.value);
             passwordStrength.textContent = strength;
         });
-
+        
         function getPasswordStrength(password) {
             if (password.length < 6) return "Weak";
             if (password.match(/[A-Z]/) && password.match(/[0-9]/)) return "Strong";
@@ -69,4 +72,5 @@
         }
     </script>
 </body>
+
 </html>
