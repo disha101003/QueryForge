@@ -1,7 +1,8 @@
 from transformers import AutoTokenizer, AutoModel
 
-#Add your own OPENAI API key
+# Add your own OPENAI API key
 OPENAI_API_KEY = ''
+
 # Configuration Dictionary
 config = {
     "database_paths": {
