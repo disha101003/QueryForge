@@ -13,4 +13,4 @@ pytest==7.4.0
 flake8
 langchain_core
 langchain_openai
-beautifulsoup4==4.13.0
+beautifulsoup4==4.12.0
