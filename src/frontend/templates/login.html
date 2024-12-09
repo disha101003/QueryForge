@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
+    <!-- Message Flashing -->
     <div class="container">
         <div class="flash-container">
         {% with messages = get_flashed_messages(with_categories=True) %}
@@ -17,8 +20,7 @@
             {% endif %}
         {% endwith %}
     </div>
-
-
+        <!-- Main Login form -->
         <form id="loginForm" action="{{ url_for('login') }}" method="POST" class="sign-in-form">
             <h2 class="title">Login</h2>
             <div class="input-field">
@@ -32,4 +34,5 @@
         </form>
     </div>
 </body>
+
 </html>

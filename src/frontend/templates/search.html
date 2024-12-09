@@ -31,7 +31,9 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Side Bar -->
     <div class="sidebar">
         <a href="{{ url_for('login') }}">Login</a>
         <a href="{{ url_for('index') }}">Home</a>
@@ -42,6 +44,7 @@
         <a href="#" onclick="toggleTab('DURI')">DURI</a>
         <a href="#" onclick="toggleTab('Other Research Opportunities')">Other Research Opportunities</a>
     </div>
+    <!-- Main Search Form -->
     <div class="main-content">
         <h1>Discover Research Opportunities at Purdue University</h1>
         <div id="dynamicTitle"></div>
