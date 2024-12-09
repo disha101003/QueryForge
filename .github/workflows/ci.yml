@@ -35,11 +35,6 @@ jobs:
           cd tests
           python test.py
 
-      - name: Build executable with PyInstaller using spec file
-        run: |
-          pip install pyinstaller
-          pyinstaller app.spec  # Use the spec file for building
-
       - name: Archive build artifacts
         uses: actions/upload-artifact@v3  # Update to v3
         with:
