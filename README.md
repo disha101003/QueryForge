@@ -39,7 +39,7 @@ After using the tabs, click **Search** to see refined results.
 
 ### Uploading a Resume for Parsing
 1. **Navigate to the Resume Parsing Section**: Access this through the main menu.
-2. **Upload Resume**: Choose a `.pdf` or `.docx` file from your device.
+2. **Upload Resume**: Choose a `.docx` file from your device.
 3. **Parse and Analyze**: Once uploaded, the application will extract text from the resume, highlight key skills, and display the most frequently mentioned keywords.
 
 > **Note**: For optimal parsing, ensure your resume is formatted simply, with clear sections such as **Experience**, **Education**, and **Skills**.
@@ -75,7 +75,7 @@ The application follows a multi-tier architecture, consisting of:
 - **Backend**: Flask, REST API
 - **Database**: SQLite
 - **Web Scraping**: BeautifulSoup, Requests
-- **Resume Parsing**: PyPDF2, pdfplumber, NLTK
+- **Resume Parsing**: docx, pdfplumber, NLTK
 - **RAG Model**: spaCy, OpenAI's GPT, Haystack, Pinecone, NLTK
 
 
