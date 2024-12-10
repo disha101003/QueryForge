@@ -9,8 +9,9 @@ gunicorn==20.1.0
 bcrypt==4.0.1
 requests==2.31.0
 WTForms==3.0.1
-pytest==7.4.0
-flake8
 langchain_core
 langchain_openai
 beautifulsoup4==4.12.0
+transformers
+torch
+python-docx
