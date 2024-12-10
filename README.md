@@ -49,8 +49,13 @@ After using the tabs, click **Search** to see refined results.
 2. **Upload Resume**: Navigate to the Resume section to upload your resume, analyze key terms, and find matching projects.
 3. **Refine Results**: Use additional filters to narrow down results based on specific departments, VIP/EPICS project teams, or available positions.
 
-### Example Usage
+### Example Usage of the Search Engine
 <img width="713" alt="image" src="https://github.com/user-attachments/assets/5d81e987-07c5-44a3-bcac-8fa0ef7c81da">
+
+## Example Usage of the Resume Parser
+<img width="713" alt="Screenshot 2024-12-09 at 11 10 05 PM" src="https://github.com/user-attachments/assets/75869221-3f0d-436f-9a39-9bd179e8f1fe">
+<img width="713" alt="Screenshot 2024-12-09 at 11 10 21 PM" src="https://github.com/user-attachments/assets/7ff682af-edc4-48b9-b0be-c60c2e4fa0e0">
+
 
 
 ## Architecture
