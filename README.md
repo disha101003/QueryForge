@@ -10,7 +10,7 @@ As students, we understand the challenge of finding research opportunities due t
 
 
 ## Accessing the Application
-1. **Open the Web Application**: Go to the application URL (http://3.142.98.164:5000/) in your preferred web browser.
+1. **Open the Web Application**: Go to the application URL (http://3.145.97.209:5000/) in your preferred web browser.
 2. **Login**: Sign in using your credentials. If you are new to the application, you will be asked to create an account.
 
 ## Features and Usage
